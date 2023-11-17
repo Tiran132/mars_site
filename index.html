@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head
+    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+  >
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="SimInTech" />
+    <meta name="description" content="SimInTech" />
+    
+    <link
+      href="./style.css"
+      type="text/css"
+      data-template-style="true"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <!-- <link
+      type="image/png"
+      href="/local/templates/.default/img/favicon.png"
+      rel="icon"
+    /> -->
+
+    <link
+      href="./local/main.ttf"
+      as="font"
+      rel="preload"
+      crossorigin="anonymous"
+    />
+    <title>SimInTech</title>
+    <meta
+      property="og:title"
+      content="Среда динамического моделирования МАРС"
+    />
+    <meta
+      property="og:description"
+      content="МАРС  – Разработка математических моделей, алгоритмов управления, интерфейсов управления и автоматическая генерация кода для контроллеров управления и графических дисплеев - это основная задача среды разработки.      "
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://simintech.ru/" />
+    <meta
+      property="og:image"
+      content="https://simintech.ru/local/templates/.default/img/favicon.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+
+
+  </head>
+  <body data-preloader="" class="">
+    <noscript>
+      <div class="no-script-warning">
+        К сожалению, ваш браузер <strong>не поддерживает</strong> JavaScript.
+        Пожалуйста,
+        <a href="http://browsehappy.com/" target="_blank" rel="nofollow"
+          >обновите</a
+        >
+        ваш браузер или включите поддержку JavaScript для корректного
+        отображения страницы.
+      </div>
+    </noscript>
+
+    <header class="main-header container" style="overflow: hidden;">
+      <a
+        class="simintech-logo"
+        href="/"
+        style="
+            text-decoration: none;
+            font-size: 56px;
+            color: #000;
+            font-weight: bold;
+        "
+      >МАРС</a>
+
+
+      
+      <div class="main-header__search">
+        <!-- <a data-modal-trigger="search"><i class="icon-search"></i></a> -->
+      </div>
+      <div class="hamburger hamburger--squeeze js-mobile-menu" id="menu-ham">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-localization__wrap">
+      <div class="header-localization__list">
+        <a href="javascript:void(0);" class="header-localization__item active">
+          <img
+            class="header-localization__item-img"
+            src="./local/i-rus.svg"
+            alt="Русский"
+          />
+          <p class="header-localization__item-name">Русский</p>
+          <p class="header-localization__item-description">Россия и СНГ</p>
+        </a>
+        <a href="https://en.simintech.ru/" class="header-localization__item">
+          <img
+            class="header-localization__item-img"
+            src="./local/i-eng.svg"
+            alt="English"
+          />
+          <p class="header-localization__item-name">English</p>
+          <p class="header-localization__item-description">usa</p>
+        </a>
+        <!-- <a href="javascript:void(0);" class="header-localization__item">
+            <img class="header-localization__item-img" src="/local/templates/.default/img/i-deu.svg" alt="Deutsch"/>
+            <p class="header-localization__item-name">Deutsch</p>
+            <p class="header-localization__item-description">Deutschland (Germany)</p>
+        </a> -->
+      </div>
+    </div>
+
+    <div class="wide-border"></div>
+
+    <nav class="main-menu container">
+      <ul>
+        <li class="active">
+          <a href="/">О simintech</a>
+        </li>
+        <li class="">
+          <a data-modal-trigger="download" href="">Скачать дистрибутив</a>
+        </li>
+        <li class="">
+          <a href="/science/publications/knigi/">Наука и образование</a>
+        </li>
+        <li class="">
+          <a href="/vacancy/">Вакансии</a>
+        </li>
+        <li class="">
+          <a href="/news/">Новости</a>
+        </li>
+        <li class="">
+          <a href="https://help.simintech.ru/#o_simintech/browsers.html"
+            >Справка</a
+          >
+        </li>
+        <li class="">
+          <a href="/contacts/">Контакты</a>
+        </li>
+        <li class="">
+          <a href="/forum/">Форум</a>
+        </li>
+        <li class="main-menu__search">
+          <a data-modal-trigger="search"><i class="icon-search"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="main-mobile-menu">
+      <ul>
+        <li class="active">
+          <a href="/">О simintech</a>
+        </li>
+        <li class="">
+          <a data-modal-trigger="download" href="">Скачать дистрибутив</a>
+        </li>
+        <li class="">
+          <a href="/science/publications/knigi/">Наука и образование</a>
+        </li>
+        <li class="">
+          <a href="/vacancy/">Вакансии</a>
+        </li>
+        <li class="">
+          <a href="/news/">Новости</a>
+        </li>
+        <li class="">
+          <a href="https://help.simintech.ru/#o_simintech/browsers.html"
+            >Справка</a
+          >
+        </li>
+        <li class="">
+          <a href="/contacts/">Контакты</a>
+        </li>
+        <li class="">
+          <a href="/forum/">Форум</a>
+        </li>
+      </ul>
+    </nav>
+    <section
+      class="main-banner"
+      style="
+        background-image: url('https://www.howden.com/Howden/media/Howden/img/intelligent-solutions/HowdenDigitalSolutions.jpg');
+      "
+      data-bg="./local/da5baa40c973c41af14eb9983366e7f8.png"
+      data-bg-webp="./local/da5baa40c973c41af14eb9983366e7f8.webp"
+    >
+      <h1>Среда динамического моделирования SimInTech</h1>
+      <div class="main-banner__spacer"></div>
+      <button id="d123" class="btn-orange btn-sm" data-modal-trigger="download">
+        Скачать программу
+      </button>
+      <a
+        href="https://help.simintech.ru/#o_simintech/browsers.html"
+        class="btn-sm btn-transparent"
+        >Дополнительная информация</a
+      >
+      <div class="mouse-icon"></div>
+    </section>
+
+    <section class="main-intro bg-image-gear">
+      <div class="container">
+        <p class="main-intro__text">
+          <strong>SimInTech (Simulation In Technic)</strong> – среда разработки
+          математических моделей, алгоритмов управления, интерфейсов управления
+          и автоматической генерации кода для контроллеров управления и
+          графических дисплеев.<br />
+          SimInTech предназначен для детального исследования и анализа
+          нестационарных процессов в различных объектах управления.<br />
+          
+          <a
+            href="#"
+            class="btn-sm btn-gray btn-m0 main-intro__download"
+            data-modal-trigger="download"
+            >Скачать программу</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section class="main-quick-start">
+      <div class="container">
+        <h1>Как начать пользоваться?</h1>
+        <p>
+          <strong>МАРС</strong> —среда динамического моделирования, предназначенная для расчётной проверки работы системы управления сложными техническими объектами и моделирования технологических процессов в различных отраслях.
+        </p>
+
+        <div
+          class="main-quick-start__cards"
+          data-simplebar
+          data-simplebar-auto-hide="false"
+        >
+          <div class="main-quick-start__cards-wrap">
+            <div class="quick-start-card">
+              <div>
+                <div class="quick-start-card__image">
+                  <img
+                    src="./local/quickstart-card-1.svg"
+                    alt=""
+                  />
+                  <div class="quick-start-card__num">1</div>
+                </div>
+                <div class="quick-start-card__text">
+                  Заполните <a href="#">форму</a>, выбрав нужный дистрибутив
+                </div>
+              </div>
+            </div>
+            <div class="quick-start-card">
+              <div>
+                <div class="quick-start-card__image">
+                  <img
+                    src="./local/quickstart-card-2.svg"
+                    alt=""
+                  />
+                  <div class="quick-start-card__num">2</div>
+                </div>
+                <div class="quick-start-card__text">
+                  Получите ссылку на скачивание дистрибутива
+                </div>
+              </div>
+            </div>
+            <div class="quick-start-card">
+              <div>
+                <div class="quick-start-card__image">
+                  <img
+                    src="./local/quickstart-card-3.svg"
+                    alt=""
+                  />
+                  <div class="quick-start-card__num">3</div>
+                </div>
+                <div class="quick-start-card__text">
+                  Установите программный продукт
+                </div>
+              </div>
+            </div>
+            <div class="quick-start-card">
+              <div>
+                <div class="quick-start-card__image">
+                  <img
+                    src="./local/quickstart-card-4.svg"
+                    alt=""
+                  />
+                  <div class="quick-start-card__num">4</div>
+                </div>
+                <div class="quick-start-card__text">
+                  Если вам необходима полная версия программы, отправьте запрос
+                  из интерфейса программы
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-np">
+        <div class="main-quick-start__links">
+          <div class="main-quick-start-link-card">
+            <div class="main-quick-start-link-card__image">
+              <img
+                src="./local/main-quickstart-instruction.svg"
+                alt="инструкция"
+              />
+            </div>
+            <p class="main-quick-start-link-card__text">
+              Вы можете ознакомиться с развернутой <br />
+              <a
+                target="_blank"
+                href="https://simintech.ru/upload/presentation/SimInTech%202020%20-%20installation%20guide.pdf"
+                >инструкцией по установке</a
+              >
+            </p>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="main-quick-start-link-card">
+            <div class="main-quick-start-link-card__image">
+              <img
+                src="./local/main-quickstart-support.svg"
+                alt="техподдержка"
+              />
+            </div>
+            <p class="main-quick-start-link-card__text">
+              При возникновении проблем обращайтесь в техподдержку
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__top">
+          
+            <div class="main-footer__col-1">
+              <ul>
+                <li class="">
+                  <a href="#" data-modal-trigger="download">Скачать дистрибутив</a>
+                </li>
+                <li class="">
+                  <a href="/models/">Примеры моделей</a>
+                </li>
+                <li class="">
+                  <a href="/science/publications/knigi/">Наука и образование</a>
+                </li>
+                <li class="">
+                  <a href="/news/">Новости</a>
+                </li>
+                <li class="">
+                  <a href="/contacts/">Контакты</a>
+                </li>
+                <li class="">
+                  <a href="/tch/">Запрос ТКП</a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-footer__col-2">
+              <ul>
+                <li class="">
+                  <a href="/forum/?PAGE_NAME=list&amp;FID=3">Форум</a>
+                </li>
+                <li class="">
+                  <a href="https://help.simintech.ru/#o_simintech/browsers.html">Справка</a>
+                </li>
+                <li class="">
+                  <a href="/faq/">FAQ</a>
+                </li>
+                <li class="">
+                  <a href="/library/">Библиотеки</a>
+                </li>
+                <li class="">
+                  <a href="/vacancy/">Вакансии</a>
+                </li>
+                <li class="">
+                  <a href="/sitemap/">Карта сайта</a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="main-footer__copy container">
+        © 2021 - ООО «3В Сервис»
+        <div class="impulsit">
+          Разработано:
+          <a
+            href="https://impulsit.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="impulsit-logo"></div>
+          </a>
+        </div>
+      </div> -->
+    </footer>
+    <div class="modal search-modal" data-modal-type="search">
+      <div class="container">
+        <header class="search-modal__header">
+          <div class="simintech-logo"></div>
+          <div class="close-button" data-role="close-modal"></div>
+        </header>
+        <div class="search-modal__body" data-search="root">
+          <div id="comp_4a71516943d5230682387256ca7ecb0e">
+            <form action="" method="get" id="SEARCH_FORM" class="site-search">
+              <input
+                type="hidden"
+                name="bxajaxid"
+                id="bxajaxid_4a71516943d5230682387256ca7ecb0e_8BACKi"
+                value="4a71516943d5230682387256ca7ecb0e"
+              /><input type="hidden" name="AJAX_CALL" value="Y" />
+              <div class="easy-autocomplete" id="app_search_title">
+                <input
+                  v-model="search"
+                  id="STR"
+                  type="text"
+                  placeholder="Поиск"
+                  autocomplete="off"
+                  name="q"
+                  value=""
+                />
+                <div
+                  class="easy-autocomplete-container"
+                  id="eac-container-site-search"
+                >
+                  <ul style="display: block" v-show="result.length > 0">
+                    <li
+                      v-for="item in result"
+                      class="js_text-select"
+                      v-on:click="startSearch(item)"
+                    >
+                      <div class="eac-item">
+                        <div class="tags" v-html="item.IBLOCK.NAME"></div>
+                        <div class="text" v-html="item.TITLE_FORMATED"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="site-search__separator"></div>
+              <input type="hidden" id="IBLOCK" name="iblock" value="" />
+              <button
+                id="start-search"
+                class="btn btn-sm btn-icon-right site-search__button"
+              >
+                Найти <i class="icon-arrow-right"></i>
+              </button>
+            </form>
+            <div class="search-examples" data-search="examples">
+              <strong>Пример:</strong>
+              <strong>Пример:</strong>
+              <span>Математическая модель закона Бернули</span> или
+              <span>Журнал "Молодой учёный"</span>
+            </div>
+            <div class="search-modal__close">
+              <button class="btn-sm" data-role="close-modal">закрыть</button>
+            </div>
+          </div>
+          <div class="site-map" data-collapse="root">
+            <div
+              class="site-map__header"
+              data-collapse="toggle"
+              data-collapse-class="site-map--opened"
+            >
+              Карта сайта
+            </div>
+            <div
+              class="site-map__content"
+              data-collapse="content"
+              style="display: none; opacity: 0"
+            >
+              <div>
+                <a href="">Скачать дистрибутив</a>
+              </div>
+              <div>
+                <a href="/models/">Примеры моделей</a>
+              </div>
+              <div>
+                <a href="/science/publications/knigi/">Наука и образование</a>
+              </div>
+              <div>
+                <a href="/news/">Новости</a>
+              </div>
+              <div>
+                <a href="/contacts/">Контакты</a>
+              </div>
+              <div>
+                <a href="/tch/">Запрос ТКП</a>
+              </div>
+              <div>
+                <a href="/forum/">Форум</a>
+              </div>
+              <div>
+                <a href="">Справка</a>
+              </div>
+              <div>
+                <a href="/faq/">FAQ</a>
+              </div>
+              <div>
+                <a href="/library/">Библиотеки</a>
+              </div>
+              <div>
+                <a href="/vacancy/">Вакансии</a>
+              </div>
+              <div>
+                <a href="/sitemap/">Карта сайта</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal requirements-modal" data-modal-type="requirements">
+      <div class="container">
+        <header class="requirements-modal__header">
+          <div class="simintech-logo-modal"></div>
+          <div class="close-button-white" data-role="close-modal"></div>
+        </header>
+        <div class="requirements-modal__body">
+          <div class="requirements-modal__title">Системные требования</div>
+          <div class="requirements-modal__text">
+            <div>
+              <p><strong>Минимальные системные требования:</strong></p>
+              <p>
+                Процессор: c двумя и более физическими ядрами, поддерживающий
+                технологию SSE2
+              </p>
+              <p>Видеокарта: GeForce 8600/ATI Radeon HD 4550M</p>
+              <p>Оперативная память: 2 ГБ для Windows 7/8/10</p>
+              <p>Операционная система: Windows 7/8/10</p>
+              <p>Место на диске: 40 ГБ</p>
+            </div>
+            <div>
+              <p><strong>Рекомендуемые системные требования:</strong></p>
+              <p>Процессор: Intel Core i5-7400 / AMD Ryzen 5 1500X</p>
+              <p>
+                Видеокарта: NVIDIA® GeForce GTX 1050 Ti 4 ГБ / NVIDIA® GeForce
+                GTX 1650 4 ГБ / Radeon RX 570 (4 ГБ)
+              </p>
+              <p>Оперативная память: 8 Гб</p>
+              <p>Операционная система: Windows 7/8/10 — 64-bit</p>
+              <p>Место на диске: 61.5 ГБ</p>
+              <p>
+                Скорость интернет-соединения: 1024 Кбит/с или выше (для работы
+                голосового чата)
+              </p>
+            </div>
+          </div>
+          <div class="center mt100">
+            <a data-role="close-modal" class="btn-sm">закрыть</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal download-modal" data-modal-type="download">
+      <div class="container">
+        <header class="download-modal__header">
+          <div class="simintech-logo-modal-2"></div>
+          <div class="close-button-white" data-role="close-modal"></div>
+        </header>
+        <div id="comp_58ce54de7215a828d8230882ebd71566">
+          <form
+            class="download-modal__body"
+            action=""
+            id="FFD"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <input
+              type="hidden"
+              name="bxajaxid"
+              id="bxajaxid_58ce54de7215a828d8230882ebd71566_Ar8Szp"
+              value="58ce54de7215a828d8230882ebd71566"
+            /><input type="hidden" name="AJAX_CALL" value="Y" />
+            <div class="download-modal__title">Скачать программу</div>
+
+            <div class="download-modal__form-top">
+              <select name="FFD[PROP][LICENSE]" id="">
+                <option value="210">
+                  SimInTech - 64 битная версия для ОС Windows 7 и выше
+                </option>
+                <option value="212">
+                  SimInTech - 32 битная версия для ОС Windows 7 и выше
+                </option>
+                <option value="254">
+                  SimInTech - 32 битная версия для ОС Windows XP
+                </option>
+                <option value="2998">
+                  SimInTech - 64 битная Английская версия для ОС Windows 7 и
+                  выше
+                </option>
+                <option value="211">
+                  SimInTech - 32 битная Английская версия для ОС Windows 7 и
+                  выше
+                </option>
+                <option value="2561">
+                  SimInTech - Бета-версия для OC Linux
+                </option>
+                <option value="251">Пакет компиляторов</option>
+                <option value="19995">NordWind - ОС Linux</option>
+              </select>
+            </div>
+            <div class="download-modal__form js_company">
+              <input
+                type="text"
+                placeholder="фамилия*"
+                required
+                name="FFD[PROP][SECOND_NAME]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="имя"
+                name="FFD[PROP][NAME]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="отчество"
+                name="FFD[PROP][LAST_NAME]"
+                value=""
+              />
+
+              <div class="switch-wrap">
+                <span
+                  onclick="$(this).parents('.download-modal__form').addClass('js_company');"
+                  class="switch-label switch-label--active"
+                  >Компания</span
+                >
+                <span
+                  onclick="$(this).parents('.download-modal__form').toggleClass('js_company');"
+                  class="switch"
+                  data-switch-name="ttt"
+                  data-value-left="left"
+                  data-value-right="right"
+                  ><input type="hidden" name="FFD[PROP][TYPE]" value="Компания"
+                /></span>
+                <span
+                  onclick="$(this).parents('.download-modal__form').removeClass('js_company');"
+                  class="switch-label"
+                  >Учебное заведение</span
+                >
+              </div>
+
+              <div class="switch-wrap switch-wrap--university">
+                <span class="switch-label switch-label--active"
+                  >Преподаватель</span
+                >
+                <span
+                  class="switch"
+                  data-switch-name="ttt"
+                  data-value-left="left"
+                  data-value-right="right"
+                  ><input
+                    type="hidden"
+                    name="FFD[PROP][UNIVERSITY_TYPE]"
+                    value="Преподаватель"
+                /></span>
+                <span class="switch-label">Студент/Аспирант</span>
+              </div>
+
+              <div
+                id="download_app_university_input"
+                tabindex="0"
+                @focusout="handleFocusOut"
+              >
+                <input
+                  type="text"
+                  placeholder="название организации*"
+                  v-model="input"
+                  name="FFD[PROP][ORGANIZATION]"
+                  required
+                  value=""
+                />
+                <ul class="freeware-form__results" v-if="input && show">
+                  <li
+                    class="freeware-form__result"
+                    v-for="(element, index) in result"
+                    v-html="element.format"
+                    @click="input = element.original; show = false"
+                  ></li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                placeholder="должность"
+                name="FFD[PROP][POSITION]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="эл. почта*"
+                name="FFD[PROP][EMAIL]"
+                required
+                value=""
+              />
+              <input
+                type="tel"
+                placeholder="телефон"
+                name="FFD[PROP][PHONE]"
+                value=""
+              />
+
+              <textarea
+                class="support-form__textarea"
+                rows="5"
+                placeholder="комментарий"
+                name="FFD[COMMENT]"
+              ></textarea>
+              <input
+                type="hidden"
+                name="recaptcha_response"
+                id="FFDrecaptchaResponse"
+              />
+              <div class="bottom-bid__buttons-agreement">
+                <input
+                  type="checkbox"
+                  required=""
+                  id="FFD_check"
+                  onclick="$('#FFD_but').prop('disabled', function(i, v) { if(this.checked) {return false} else {return true}; }.bind(this) );"
+                />
+                <label for="FFD_check" class="custom-checkbox">
+                  Настоящим даю свое согласие на обработку персональных данных в
+                  соответствии с&nbsp;
+                  <a href="/upload/policy2.pdf" target="_blank"
+                    >политикой обработки персональных данных</a
+                  >&nbsp; и&nbsp;
+                  <a href="/policy.pdf" target="_blank"
+                    >политикой конфиденциальности</a
+                  >&nbsp; ООО "3ВС"
+                </label>
+              </div>
+            </div>
+
+            <div class="center mt10">
+              <button
+                id="FFD_but"
+                name="FFD[SUBMIT]"
+                class="btn-sm btn-orange"
+                value="button"
+              >
+                продолжить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal image-viewer" data-modal-type="image-viewer">
+      <a class="image-viewer__close" data-role="close-modal"></a>
+      <div class="image-viewer__card"></div>
+      <div class="image-viewer__dots">
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot image-viewer__dot--active"></span>
+      </div>
+    </div>
+
+
+    <script>
+        let clicked = false
+
+        $("#menu-ham").click(() => {
+            // main-mobile-menu--active
+            if (!clicked) {
+                $(".main-mobile-menu").addClass("main-mobile-menu--active");
+                $(".main-mobile-menu").css('opacity', '1');
+                clicked = true
+            }
+            else {
+                clicked = false
+                $(".main-mobile-menu").removeClass("main-mobile-menu--active");
+                $(".main-mobile-menu").css('opacity', '0');
+            }
+        })
+
+    </script>
+
+
+<script>
+    let clicked_download = false
+
+    $("#d123").click(() => {
+        // main-mobile-menu--active
+        if (!clicked_download) {
+            $(".download-modal").addClass("modal--opened");
+            $(".download-modal").css('opacity', '1');
+            clicked_download = true
+        }
+        else {
+            clicked_download = false
+            $(".download-modal").removeClass("modal--opened");
+            $(".download-modal").css('opacity', '0');
+        }
+    })
+
+</script>
+
+  </body>
+</html>
