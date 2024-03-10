@@ -1,5 +1,9 @@
 
 
+.WordSection1 {
+  padding: 0 20px;
+}
+
 /* Start:/local/templates/.default/css/app.css?1640809265161802*/
 /* Box sizing rules */
 *,
@@ -75,9 +79,9 @@ select {
 }
 
 /* Blur images when they have no alt attribute */
-img:not([alt]) {
+/* img:not([alt]) {
   filter: blur(10px);
-}
+} */
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -854,3 +858,40 @@ form .error-message {
 /* /local/templates/.default/components/bitrix/system.pagenavigation/.default/style.css?1640809265146 */
 /* /local/components/impulsit/feedback.form.bid/templates/download/style.css?16408092671316 */
 /* /local/templates/template_home/styles.css?16408092653 */
+
+
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+
+.WordSection1 * {
+  font-size: 12pt !important;
+}
+
+#doc-navigarion {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding: 20px;
+  width: 20vw;
+  height: 100vh;
+  z-index: 2;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#doc-navigarion a {
+  display: block;
+  font-size: 10pt;
+  line-height: 1.5;
+  text-decoration: none;
+  color: #000;
+}
+
+#doc-navigarion .active a {
+  color: blue;
+  font-weight: bold;
+}
