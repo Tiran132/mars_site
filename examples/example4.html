@@ -1,0 +1,2999 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head
+    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+  >
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="СМ Марс" />
+    <meta name="description" content="СМ Марс" />
+    
+    <link
+      href="../style.css"
+      type="text/css"
+      data-template-style="true"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <!-- <link
+      type="image/png"
+      href="/local/templates/.default/img/favicon.png"
+      rel="icon"
+    /> -->
+
+    <link
+      href="../local/main.ttf"
+      as="font"
+      rel="preload"
+      crossorigin="anonymous"
+    />
+    <title>Среда моделирования МАРС</title>
+    <meta
+      property="og:title"
+      content="Среда динамического моделирования МАРС"
+    />
+    <meta
+      property="og:description"
+      content="МАРС  – Разработка математических моделей, алгоритмов управления, интерфейсов управления и автоматическая генерация кода для контроллеров управления и графических дисплеев - это основная задача среды разработки.      "
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://МАРС.ru/" />
+    <meta
+      property="og:image"
+      content="https://МАРС.ru/local/templates/.default/img/favicon.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family:Wingdings;
+      	panose-1:5 0 0 0 0 0 0 0 0 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 4 5 3 5 4 6 3 2 4;}
+      @font-face
+      	{font-family:Calibri;
+      	panose-1:2 15 5 2 2 2 4 3 2 4;}
+      @font-face
+      	{font-family:Georgia;
+      	panose-1:2 4 5 2 5 4 5 2 3 3;}
+      @font-face
+      	{font-family:"Segoe UI";
+      	panose-1:2 11 5 2 4 2 4 2 2 3;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      h1
+      	{mso-style-link:"Heading 1 Char1";
+      	margin-top:12.0pt;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:16.0pt;
+      	font-family:"Calibri Light",sans-serif;
+      	color:#2E74B5;
+      	font-weight:normal;}
+      h2
+      	{mso-style-link:"Heading 2 Char1";
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:18.0pt;
+      	font-family:"Times New Roman",serif;
+      	font-weight:bold;}
+      h3
+      	{mso-style-link:"Heading 3 Char1";
+      	margin-top:2.0pt;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:12.0pt;
+      	font-family:"Calibri Light",sans-serif;
+      	color:#1F4D78;
+      	font-weight:normal;}
+      h4
+      	{mso-style-link:"Heading 4 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:13.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      h5
+      	{mso-style-link:"Heading 5 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:12.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      h6
+      	{mso-style-link:"Heading 6 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+      	{mso-style-link:"Heading 7 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;
+      	font-style:italic;}
+        .MsoNormal span {
+          /* flex-direction: column; */
+          /* justify-content: center; */
+          /* display: flex; */
+        }
+      p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+      	{mso-style-link:"Heading 8 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+      	{mso-style-link:"Heading 9 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:10.5pt;
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      p.MsoToc1, li.MsoToc1, div.MsoToc1
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc2, li.MsoToc2, div.MsoToc2
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:14.15pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc3, li.MsoToc3, div.MsoToc3
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:28.35pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc4, li.MsoToc4, div.MsoToc4
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:42.5pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc5, li.MsoToc5, div.MsoToc5
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:56.7pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc6, li.MsoToc6, div.MsoToc6
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:70.85pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc7, li.MsoToc7, div.MsoToc7
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:85.05pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc8, li.MsoToc8, div.MsoToc8
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:99.2pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc9, li.MsoToc9, div.MsoToc9
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:113.4pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+      	{mso-style-link:"Footnote Text Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.0pt;
+      	margin-left:0in;
+      	font-size:9.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+      	{mso-style-link:"Comment Text Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	font-size:10.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoHeader, li.MsoHeader, div.MsoHeader
+      	{mso-style-link:"Header Char";
+      	margin:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoFooter, li.MsoFooter, div.MsoFooter
+      	{mso-style-link:"Footer Char1";
+      	margin:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoCaption, li.MsoCaption, div.MsoCaption
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	line-height:115%;
+      	font-size:9.0pt;
+      	font-family:"Calibri",sans-serif;
+      	color:#5B9BD5;
+      	font-weight:bold;}
+      p.MsoTof, li.MsoTof, div.MsoTof
+      	{margin:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      span.MsoFootnoteReference
+      	{vertical-align:super;}
+      span.MsoEndnoteReference
+      	{vertical-align:super;}
+      p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+      	{mso-style-link:"Endnote Text Char";
+      	margin:0in;
+      	font-size:10.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitle, li.MsoTitle, div.MsoTitle
+      	{mso-style-link:"Title Char";
+      	margin-top:15.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+      	{mso-style-link:"Title Char";
+      	margin-top:15.0pt;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+      	{mso-style-link:"Title Char";
+      	margin:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+      	{mso-style-link:"Title Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+      	{mso-style-link:"Subtitle Char";
+      	margin-top:10.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:12.0pt;
+      	font-family:"Calibri",sans-serif;}
+      a:link, span.MsoHyperlink
+      	{color:#0563C1;
+      	text-decoration:underline;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:#954F72;
+      	text-decoration:underline;}
+      p
+      	{margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+      	{mso-style-link:"Comment Subject Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	font-size:10.0pt;
+      	font-family:"Calibri",sans-serif;
+      	font-weight:bold;}
+      p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+      	{mso-style-link:"Balloon Text Char";
+      	margin:0in;
+      	font-size:9.0pt;
+      	font-family:"Segoe UI",sans-serif;}
+      p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+      	{margin:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoQuote, li.MsoQuote, div.MsoQuote
+      	{mso-style-link:"Quote Char";
+      	margin-top:0in;
+      	margin-right:.5in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;
+      	font-style:italic;}
+      p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+      	{mso-style-link:"Intense Quote Char";
+      	margin-top:0in;
+      	margin-right:.5in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	background:#F2F2F2;
+      	border:none;
+      	padding:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;
+      	font-style:italic;}
+      p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      span.Heading1Char
+      	{mso-style-name:"Heading 1 Char";
+      	font-family:"Arial",sans-serif;}
+      span.Heading2Char
+      	{mso-style-name:"Heading 2 Char";
+      	font-family:"Arial",sans-serif;}
+      span.Heading3Char
+      	{mso-style-name:"Heading 3 Char";
+      	font-family:"Arial",sans-serif;}
+      span.Heading4Char
+      	{mso-style-name:"Heading 4 Char";
+      	mso-style-link:"Heading 4";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      span.Heading5Char
+      	{mso-style-name:"Heading 5 Char";
+      	mso-style-link:"Heading 5";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      span.Heading6Char
+      	{mso-style-name:"Heading 6 Char";
+      	mso-style-link:"Heading 6";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      span.Heading7Char
+      	{mso-style-name:"Heading 7 Char";
+      	mso-style-link:"Heading 7";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;
+      	font-style:italic;}
+      span.Heading8Char
+      	{mso-style-name:"Heading 8 Char";
+      	mso-style-link:"Heading 8";
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      span.Heading9Char
+      	{mso-style-name:"Heading 9 Char";
+      	mso-style-link:"Heading 9";
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      span.TitleChar
+      	{mso-style-name:"Title Char";
+      	mso-style-link:Title;}
+      span.SubtitleChar
+      	{mso-style-name:"Subtitle Char";
+      	mso-style-link:Subtitle;}
+      span.QuoteChar
+      	{mso-style-name:"Quote Char";
+      	mso-style-link:Quote;
+      	font-style:italic;}
+      span.IntenseQuoteChar
+      	{mso-style-name:"Intense Quote Char";
+      	mso-style-link:"Intense Quote";
+      	font-style:italic;}
+      span.HeaderChar
+      	{mso-style-name:"Header Char";
+      	mso-style-link:Header;}
+      span.FooterChar
+      	{mso-style-name:"Footer Char";}
+      span.FooterChar1
+      	{mso-style-name:"Footer Char1";
+      	mso-style-link:Footer;}
+      span.FootnoteTextChar
+      	{mso-style-name:"Footnote Text Char";
+      	mso-style-link:"Footnote Text";}
+      span.EndnoteTextChar
+      	{mso-style-name:"Endnote Text Char";
+      	mso-style-link:"Endnote Text";}
+      span.docdata
+      	{mso-style-name:docdata;}
+      span.CommentTextChar
+      	{mso-style-name:"Comment Text Char";
+      	mso-style-link:"Comment Text";}
+      span.CommentSubjectChar
+      	{mso-style-name:"Comment Subject Char";
+      	mso-style-link:"Comment Subject";
+      	font-weight:bold;}
+      span.BalloonTextChar
+      	{mso-style-name:"Balloon Text Char";
+      	mso-style-link:"Balloon Text";
+      	font-family:"Segoe UI",sans-serif;}
+      span.Heading2Char1
+      	{mso-style-name:"Heading 2 Char1";
+      	mso-style-link:"Heading 2";
+      	font-family:"Times New Roman",serif;
+      	font-weight:bold;}
+      span.mw-editsection-bracket
+      	{mso-style-name:mw-editsection-bracket;}
+      span.mw-editsection-divider
+      	{mso-style-name:mw-editsection-divider;}
+      p.toclevel-1, li.toclevel-1, div.toclevel-1
+      	{mso-style-name:toclevel-1;
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      span.tocnumber
+      	{mso-style-name:tocnumber;}
+      span.toctext
+      	{mso-style-name:toctext;}
+      span.mw-headline
+      	{mso-style-name:mw-headline;}
+      span.Heading1Char1
+      	{mso-style-name:"Heading 1 Char1";
+      	mso-style-link:"Heading 1";
+      	font-family:"Calibri Light",sans-serif;
+      	color:#2E74B5;}
+      span.mw-page-title-main
+      	{mso-style-name:mw-page-title-main;}
+      span.approvedandlatestmsg
+      	{mso-style-name:approvedandlatestmsg;}
+      span.nowrap
+      	{mso-style-name:nowrap;}
+      p.toclevel-2, li.toclevel-2, div.toclevel-2
+      	{mso-style-name:toclevel-2;
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      span.Heading3Char1
+      	{mso-style-name:"Heading 3 Char1";
+      	mso-style-link:"Heading 3";
+      	font-family:"Calibri Light",sans-serif;
+      	color:#1F4D78;}
+      span.citation
+      	{mso-style-name:citation;}
+      span.wrap
+      	{mso-style-name:wrap;}
+      p.docy, li.docy, div.docy
+      	{mso-style-name:"docy\,v5\,15489\,bqiaagaaeyqcaaagiaiaaamtmgaabtm6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      .MsoChpDefault
+      	{font-family:"Calibri",sans-serif;}
+      .MsoPapDefault
+      	{margin-bottom:8.0pt;
+      	line-height:107%;}
+       /* Page Definitions */
+       @page WordSection1
+      	{size:595.3pt 841.9pt;
+      	margin:56.7pt 42.5pt 56.7pt 85.05pt;}
+      div.WordSection1
+      	{page:WordSection1;}
+       /* List Definitions */
+       ol
+      	{margin-bottom:0in;}
+      ul
+      	{margin-bottom:0in;}
+      -->
+    </style>
+  </head>
+  <body data-preloader="" class="">
+    <noscript>
+      <div class="no-script-warning">
+        К сожалению, ваш браузер <strong>не поддерживает</strong> JavaScript.
+        Пожалуйста,
+        <a href="http://browsehappy.com/" target="_blank" rel="nofollow"
+          >обновите</a
+        >
+        ваш браузер или включите поддержку JavaScript для корректного
+        отображения страницы.
+      </div>
+    </noscript>
+
+    <header class="main-header container" style="overflow: hidden;">
+      <a
+        class="МАРС-logo"
+        href="../index.html"
+        style="
+            text-decoration: none;
+            font-size: 56px;
+            color: #000;
+            font-weight: bold;
+        "
+      >СМ Марс</a>
+
+
+      
+      <div class="main-header__search">
+        <!-- <a data-modal-trigger="search"><i class="icon-search"></i></a> -->
+      </div>
+      <div class="hamburger hamburger--squeeze js-mobile-menu" id="menu-ham">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-localization__wrap">
+      <div class="header-localization__list">
+        <a href="javascript:void(0);" class="header-localization__item active">
+          <img
+            class="header-localization__item-img"
+            src="../local/i-rus.svg"
+            alt="Русский"
+          />
+          <p class="header-localization__item-name">Русский</p>
+          <p class="header-localization__item-description">Россия и СНГ</p>
+        </a>
+        <a href="https://en.МАРС.ru/" class="header-localization__item">
+          <img
+            class="header-localization__item-img"
+            src="../local/i-eng.svg"
+            alt="English"
+          />
+          <p class="header-localization__item-name">English</p>
+          <p class="header-localization__item-description">usa</p>
+        </a>
+        <!-- <a href="javascript:void(0);" class="header-localization__item">
+            <img class="header-localization__item-img" src="/local/templates/.default/img/i-deu.svg" alt="Deutsch"/>
+            <p class="header-localization__item-name">Deutsch</p>
+            <p class="header-localization__item-description">Deutschland (Germany)</p>
+        </a> -->
+      </div>
+    </div>
+
+    <div class="wide-border"></div>
+
+    <nav class="main-menu container">
+      <ul>
+        <li class="active">
+          <a href="../index.html">О СМ МАРС</a>
+        </li>
+        <li class="">
+          <a data-modal-trigger="download" href="../local/exe/mars-setup.exe">Скачать дистрибутив</a>
+        </li>
+        <li class="">
+          <a href="../publications.html">Публикации и материалы</a>
+        </li>
+        <li class="">
+          <a href="../projects.html">Проекты</a>
+        </li>
+        <li class="">
+          <a href="../news.html">Новости</a>
+        </li>
+        <li class="">
+          <a href="../instructions.html"
+            >Справка</a
+          >
+        </li>
+        <li class="">
+          <a href="../contacts.html">Контакты</a>
+        </li>
+        <li class="">
+          <a href="../forum.html">Форум</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <nav class="main-mobile-menu">
+      <ul>
+        <li class="active">
+          <a href="../index.html">О СМ МАРС</a>
+        </li>
+        <li class="">
+          <a data-modal-trigger="download" href="../local/exe/mars-setup.exe">Скачать дистрибутив</a>
+        </li>
+        <li class="">
+          <a href="../publications.html">Публикации и материалы</a>
+        </li>
+        <li class="">
+          <a href="../projects.html">Проекты</a>
+        </li>
+        <li class="">
+          <a href="../news.html">Новости</a>
+        </li>
+        <li class="">
+          <a href="../instructions.html"
+            >Справка</a
+          >
+        </li>
+        <li class="">
+          <a href="../contacts.html">Контакты</a>
+        </li>
+        <li class="">
+          <a href="../forum.html">Форум</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main-intro bg-image-gear">
+        <div class="container">
+          
+          <div class="WordSection1">
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            text-transform: uppercase;
+          "
+          >эксперимент над последовательной </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            text-transform: uppercase;
+          "
+          >RLC</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            text-transform: uppercase;
+          "
+          >-цепью во временной <a>области </a></span
+        ><span class="MsoCommentReference"
+          ><span lang="RU" style="font-size: 8pt; line-height: 150%"
+            ><a
+              class="msocomanchor"
+              id="_anchor_1"
+              onmouseover="msoCommentShow('_anchor_1','_com_1')"
+              onmouseout="msoCommentHide('_com_1')"
+              href="#_msocom_1"
+              language="JavaScript"
+              name="_msoanchor_1"
+              >[TG1]</a
+            >&nbsp;</span
+          ></span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <a
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Многоуровневая компонентная цепь, представленная на рисунке 1,
+            может быт применена для исследования электрических цепей постоянного
+            и переменного тока с использованием блоков обработки результатов
+            экспериментов.</span
+          ></a
+        >
+      </p>
+
+      <p class="MsoCaption" align="center" style="text-align: center">
+        <span lang="RU">Рисунок </span><span lang="RU">1</span
+        ><span lang="RU">
+          – Структура многоуровневой компьютерной модели физической задачи</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Пусть требуется найти значения амплитуд тока в цепи и напряжений на
+          элементах (</span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >R</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >, </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >L</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >, </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >C</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >) при их различных значениях, а также при различных значениях
+          амплитуды и фазы входного напряжения.</span
+        ><span class="MsoCommentReference"
+          ><span lang="RU" style="font-size: 8pt; line-height: 150%"
+            ><a
+              class="msocomanchor"
+              id="_anchor_2"
+              onmouseover="msoCommentShow('_anchor_2','_com_2')"
+              onmouseout="msoCommentHide('_com_2')"
+              href="#_msocom_2"
+              language="JavaScript"
+              name="_msoanchor_2"
+              >[TG2]</a
+            >&nbsp;</span
+          ></span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Шаг 1. Формирование модели электрической цепи на объектном
+            уровне</span
+          ></b
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <i
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >1.1 Установка пассивных элементов.
+          </span></i
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Необходимые элементы для построения модели исследуемой цепи находятся
+          в папке «Электротехника». В папке «Электротехника/Пассивные
+          двухполюсники», представленной на рисунке 2, находятся Земля,
+          Резистор, Индуктивность и Емкость.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            ><img
+              width="184"
+              height="253"
+              id="Рисунок 2"
+              src="../local/example_imgs/example4/image001.jpg" /></span
+        ></b>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 2 – Содержание вкладки «Электротехника/Пассивные
+          элементы»</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Разместив данные элементы на схему (смотри пункт 2.8.2 инструкции),
+          на объектном уровне многоуровневой компьютерной модели получим
+          следующий вид, представленный на рисунке 3.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="577"
+            height="370"
+            id="Рисунок 15"
+            src="../local/example_imgs/example4/image002.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 3 – Схема с установленными пассивными компонентами</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-indent: 35.4pt; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <i
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >1.2 Установка источника сигнала (генератора)</span
+          ></i
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >. Для выполнения эксперимента над компьютерной моделью электрической
+          цепи рекомендуется использовать Функциональный генератор. Он является
+          виртуальным прибором и находится в папке «Макрокомпоненты»,
+          представленной на рисунке 4.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="437"
+            height="324"
+            id="Рисунок 4"
+            src="../local/example_imgs/example4/image003.png"
+            alt="Изображение выглядит как текст, электроника, снимок экрана, дисплей&#10;&#10;Автоматически созданное описание"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 4 – Папка «Макрокомпоненты» дерева компонентов</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Установив функциональный генератор на схему, получим вид набора
+          компонентов, представленный на рисунке 5.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-indent: 35.4pt; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="577"
+            height="349"
+            id="Рисунок 18"
+            src="../local/example_imgs/example4/image004.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 5– Формируемая схема объектного уровня с установленным
+          функциональным генератором</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Принцип работы с функциональным генератором представлен в разделе 5.5
+          инструкции.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <i
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >1.3 Установка измерительных компонентов.
+          </span></i
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для получения результатов моделирования, к которым относятся
+          напряжения на пассивных элементах цепи и протекающий по ним ток,
+          установим измерительные компоненты – вольтметр и амперметр,
+          находящиеся во вкладке «Электротехника / Измерительные компоненты»
+          (рисунок 6).</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            ><img
+              width="439"
+              height="386"
+              id="Рисунок 6"
+              src="../local/example_imgs/example4/image005.png"
+              alt="Изображение выглядит как текст, снимок экрана, дисплей, число&#10;&#10;Автоматически созданное описание" /></span
+        ></b>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 6 – Вкладка «Измерительные компоненты»</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          > Эти компоненты имеют третий вывод для передачи временных
+          характеристик на визуальные компоненты (осциллограф, график и
+          т.п.).</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Установив амперметр и вольтметры для измерения напряжений на каждом
+          из элементов на схему, получим модель, представленную на рисунке
+          7.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="577"
+            height="397"
+            id="Рисунок 24"
+            src="../local/example_imgs/example4/image006.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 7 – Формируемая схема объектного уровня</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <i
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >1.4 Установка осциллографа.
+          </span></i
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для визуализации измеряемых переменных используем двухканальный
+          осциллограф, который находится во вкладке «Макрокомпоненты»,
+          представленной на рисунке 4. Схема с установленным двухканальным
+          осциллографом представлена на рисунке 8.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="594"
+            id="Рисунок 25"
+            src="../local/example_imgs/example4/image007.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 8 – Схема с установленным двухканальным осциллографом</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         <i>1.5 Соединение компонентов</i>. Соединим последовательно
+          все <span style="color: #7030a0">выводы</span> компонентов. Принципы
+          соединения компонентов и образования узлов представлены в пунктах
+          2.8.3 и 2.8.4 соответственно. Соединив все компоненты, получим схему,
+          представленную на рисунке 9.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="594"
+            id="Рисунок 26"
+            src="../local/example_imgs/example4/image008.jpg" /></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><br />
+          Рисунок 9 – Соединение компонентов для образования цепи</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <i
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >         1.6 Подключение осциллографа.
+          </span></i
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Подключим осциллограф для визуализации напряжений на индуктивности </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >L</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1 и на ёмкости С1. Для этого соединим свободные выводы вольтметров </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >V</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >2 и </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >V</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >3 с двумя выводами осциллографа. Результат этой операции
+          продемонстрирован на рисунке 10.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="594"
+            id="Рисунок 28"
+            src="../local/example_imgs/example4/image009.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 10 – Подключение осциллографа для визуализации
+          результатов</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >        
+          <b>Шаг 2. Проведение эксперимента во временной области. </b>для
+          проведения эксперимента во временной области вначале запустим схему с
+          помощью кнопки
+          <img
+            width="32"
+            height="25"
+            id="Рисунок 13"
+            src="../local/example_imgs/example4/image010.png"
+          /> и убедимся в работоспособности схемы. Если на функциональном
+          генераторе установить «Вид Сигнала» «Синусоида» и установить значения
+          параметров двухканального осциллографа, как показано на рисунке 11, то
+          можно увидеть осциллограмму, представленную на рисунке 11.
+        </span>
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            color: #7030a0;
+          "
+          >         </span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Принципы работы с двухканальным осциллографом и его параметры
+          приведены в разделе 5.5 инструкции к среде моделирования МАРС.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="489"
+            id="Рисунок 14"
+            src="../local/example_imgs/example4/image011.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 11 – Результат запуска модели на анализ</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Если по каким-то причинам Вы не увидели на осциллограмме
+          соответствующие графики, рекомендуем Вам внимательно прочитать шаг 1 и
+          проверить правильность формирования модели.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >         Шаг 3. Выбор режима анализа.
+          </span></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для анализа компьютерных моделей, в которых используются
+          функциональный генератор и/или одно- или двух канальный осциллографы,
+          используется вид анализа <b>Эксперимент</b> во
+          <b>временной области</b>. Этот режим анализа может быть задан вручную.
+          Для этого в окне <b>Настройка ядра</b> во вкладке
+          <b>Динамика </b>необходимо выбрать пункт <b>Эксперимент</b>, как
+          показано на рисунке 12.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            color: #7030a0;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="492"
+            height="481"
+            id="Рисунок 8"
+            src="../local/example_imgs/example4/image012.png"
+            alt="Изображение выглядит как текст, электроника, снимок экрана, дисплей&#10;&#10;Автоматически созданное описание"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 12 – Вкладка <b>Динамика </b>окна настроек режимов работы
+          вычислительного ядра</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            color: #7030a0;
+          "
+          >         </span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >(!) Вид анализа <b>Эксперимент</b> обеспечивает анализ исследуемой
+          модели во временной области с увеличением времени до момента, когда
+          пользователь сам остановит эксперимент. При выборе другого режима
+          анализа можно некоторое время наблюдать на осциллографе синусоиду, но
+          при достижении конечного времени анализа работа вычислительного ядра
+          может прекратиться и изменение значений параметров уже не будут влиять
+          на изменение осциллограммы. В таблице для ряда директив анализа
+          задаются параметры, в виде минимального и максимального значения
+          времени/частоты, минимальный и максимальный шаг их изменения, а также
+          точность выполнения вычислительного эксперимента</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >         Шаг 3. Варьирование значениями параметров пассивных
+            элементов.
+          </span></b
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <i
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >3.1. Изменение значений параметров в режиме редактирования
+            модели.</span
+          ></i
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+        >
+          Изменить значения параметров пассивных элементов можно в режиме
+          редактирования схемы. Для этого необходимо мышью
+          <span style="color: #7030a0">при выключенной кнопке </span
+          ><img
+            width="32"
+            height="25"
+            id="Рисунок 10"
+            src="../local/example_imgs/example4/image010.png"
+          /><span style="color: #7030a0"
+            >, то есть когда не запущен вычислительный эксперимент, </span
+          >выделить компонент, значение параметра которого необходимо заменить.
+          Например, емкость С1 на рисунке 13.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >(!) В режиме формирования модели на любом уровне поля редактора видны
+          точки сетки, как показано на рисунке 13, а в режиме проведения
+          вычислительного эксперимента точки сетки отсутствуют.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="624"
+            height="323"
+            id="Рисунок 3"
+            src="../local/example_imgs/example4/image013.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 13 – Компонентная цепь с выделенным элементом</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         В его вкладке свойства необходимо установить новое значение,
+          как показано на рисунке 14.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="245"
+            height="295"
+            id="Рисунок 17"
+            src="../local/example_imgs/example4/image014.png"
+            alt="Изображение выглядит как текст, снимок экрана, программное обеспечение, дисплей&#10;&#10;Автоматически созданное описание"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 14 – Вкладка «Свойства» с новым значением емкости</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         Результат изменения емкости показан на рисунке 15, где
+          изменился вид осциллограмм.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="470"
+            id="Рисунок 19"
+            src="../local/example_imgs/example4/image015.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 15 – Результат с измененным значением ёмкости</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            color: #7030a0;
+          "
+          >         </span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >(!) Заметьте, что в режиме анализа точки на поле редактора
+          отсутствуют.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >        
+          <i>3.2. Изменение параметров компонентов в режиме анализа модели. </i
+          >Для интерактивного изменения параметров модели используются
+          компоненты «Атрибут». Для его установки на логическом уровне
+          многоуровневой модели необходимо выделить компонент в исходной цепи,
+          которому он будет принадлежать, нажать правую кнопку мыши и в
+          появившемся меню перейти на пункт «Связь с атрибутом». Проделав эту
+          манипуляцию для трех компонентов: сопротивления </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >R</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1, индуктивности </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >L</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1 и ёмкости </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >C</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1 на логическом уровне редактора появятся три компонента «Атрибут».
+          Результат операции представлен на рисунке 16.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="259"
+            id="Рисунок 5"
+            src="../local/example_imgs/example4/image016.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 16 – Установка компонентов «Атрибут» для компонентов
+          объектного уровня</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         Подключим к установленным на логическом уровне
+          компонентам-атрибутам визуальные компоненты «Регуляторы с
+          прямоугольным бегунком», которые находятся во вкладке «Визуальные
+          компоненты \ Визуальные компоненты </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >L</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >-</span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >V</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+        >
+          \ Регуляторы/Индикаторы / Движковые» и соединим их с соответствующими
+          компонентами-атрибутами. Результат этого действия представлен на
+          рисунке 17.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="199"
+            id="Рисунок 7"
+            src="../local/example_imgs/example4/image017.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 17 – Подключение регуляторов к компонентам-атрибутам</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         С помощью вкладки «Свойства», пример которой приведен на
+          рисунке 14, изменим значения «Минимум» и «Максимум» на соответствующие
+          значения. На ней же изменим свойство «Название компонента» на
+          «Сопротивление </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >R</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1», «Индуктивность </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >L</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1» и «Ёмкость С1» соответственно. Перейдя на визуальный уровень,
+          передвигая индикаторы с помощью мыши, расположим их друг за другом,
+          для выравнивания по ширине воспользуемся кнопкой «Подогнать ширину»,
+          которая показана на рисунке 18.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="73"
+            id="Рисунок 1"
+            src="../local/example_imgs/example4/image018.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 18 – Место положение кнопки «Подогнать ширину» на панели
+          инструментов</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.4pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Результат этого действия представлен на рисунке 19.
+        </span>
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="624"
+            height="355"
+            id="Рисунок 9"
+            src="../local/example_imgs/example4/image019.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 19 – Формирование регуляторов для интерактивного изменения
+          значений параметров элементов цепи</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         Используя эти регуляторы во время анализа схемы, можно
+          наблюдать за изменением временных диаграмм соответствующих переменных </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >RLC</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >-цепи (рисунок 20).</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="441"
+            id="Рисунок 23"
+            src="../local/example_imgs/example4/image020.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 20 – Результат работы схемы при варьировании значений
+          параметров цепи</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >        
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.45pt; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для завершения эксперимента необходимо нажать кнопку
+          <img
+            width="29"
+            height="25"
+            id="Рисунок 11"
+            src="../local/example_imgs/example4/image021.png"
+          />.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="text-align: justify; text-indent: 35.45pt; line-height: 150%"
+      >
+        <i
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >4. Сохранение схемы.
+          </span></i
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Если необходимо сохранить модель для дальнейшего использования
+          необходимо воспользоваться кнопкой </span
+        ><span lang="RU"
+          ><img
+            width="16"
+            height="16"
+            id="Рисунок 30"
+            src="../local/example_imgs/example4/image022.png"
+            alt="savebutton" /></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >, пунктом <b>Сохранить</b> или <b>Сохранить как. </b>Если имя файла
+          схемы было ранее присвоено, то при нажатии на кнопку или на пункт
+          <b>Сохранить</b>, схема сохранится в указанный файл безо всякого
+          оповещения. Если сохраняется новая схема или Вы воспользовались
+          пунктом меню <b>Сохранить как</b>, то на экран будет выведено
+          диалоговое окно <b>Сохранить, </b>представленное на рисунке 21.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+            color: #7030a0;
+          "
+          ><img
+            width="623"
+            height="402"
+            id="Рисунок 12"
+            src="../local/example_imgs/example4/image023.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; line-height: 150%"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 21 – Окно <b>Сохранить</b></span
+        >
+      </p>
+
+      <p class="MsoNormal" style="line-height: 150%">
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+            "
+            >        
+          </span></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >В поле 
+          <img
+            width="487"
+            height="38"
+            id="Рисунок 16"
+            src="../local/example_imgs/example4/image024.png"
+          /> выберите место на диске, куда необходимо сохранить файл, а в поле
+          <b>Имя файла</b> введите любое имя и нажмите кнопку
+          <img
+            width="97"
+            height="24"
+            id="Рисунок 27"
+            src="../local/example_imgs/example4/image025.png"
+          />. Если сохранять не нужно, то необходимо нажать кнопку
+          <img
+            width="86"
+            height="24"
+            id="Рисунок 29"
+            src="../local/example_imgs/example4/image026.png"
+          />.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         <i>5. Закрытие программы. </i>Для того, чтобы закрыть
+          программу, можно воспользоваться пунктом <b>Выход</b> в меню
+          <b>Файл </b>или нажать на кнопку
+          <img
+            width="23"
+            height="19"
+            id="Рисунок 32"
+            src="../local/example_imgs/example4/image027.png"
+          /> в верхнем правом углу основного окна среды моделирования МАРС</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="line-height: 150%">
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 150%;
+              font-family: 'Times New Roman', serif;
+              color: #7030a0;
+            "
+            >&nbsp;</span
+          ></b
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; line-height: 150%">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 150%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+    </div>
+          </div>
+      </section>
+
+
+
+
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__top">
+          
+            <div class="main-footer__col-1">
+              <ul>
+                <li class="">
+                  <a href="../local/exe/mars-setup.exe" data-modal-trigger="download">Скачать дистрибутив</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../models/">Примеры моделей</a>
+                </li> -->
+                <li class="">
+                  <a href="../publications.html">Публикации и материалы</a>
+                </li>
+                <li class="">
+                  <a href="../news.html">Новости</a>
+                </li>
+                <li class="">
+                  <a href="../contacts.html">Контакты</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../tch/">Запрос ТКП</a>
+                </li> -->
+              </ul>
+            </div>
+            <div class="main-footer__col-2">
+              <ul>
+                <li class="">
+                  <a href="../forum.html?PAGE_NAME=list&amp;FID=3">Форум</a>
+                </li>
+                <li class="">
+                  <a href="../instructions.html">Справка</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../faq/">FAQ</a>
+                </li> -->
+                <!-- <li class="">
+                  <a href="../library/">Библиотеки</a>
+                </li> -->
+                <li class="">
+                  <a href="../projects.html">Проекты</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../sitemap/">Карта сайта</a>
+                </li> -->
+              </ul>
+            </div>
+            
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="main-footer__copy container">
+        © 2021 - ООО «3В Сервис»
+        <div class="impulsit">
+          Разработано:
+          <a
+            href="https://impulsit.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="impulsit-logo"></div>
+          </a>
+        </div>
+      </div> -->
+    </footer>
+    <div class="modal search-modal" data-modal-type="search">
+      <div class="container">
+        <header class="search-modal__header">
+          <div class="mars-logo"></div>
+          <div class="close-button" data-role="close-modal"></div>
+        </header>
+        <div class="search-modal__body" data-search="root">
+          <div id="comp_4a71516943d5230682387256ca7ecb0e">
+            <form action="" method="get" id="SEARCH_FORM" class="site-search">
+              <input
+                type="hidden"
+                name="bxajaxid"
+                id="bxajaxid_4a71516943d5230682387256ca7ecb0e_8BACKi"
+                value="4a71516943d5230682387256ca7ecb0e"
+              /><input type="hidden" name="AJAX_CALL" value="Y" />
+              <div class="easy-autocomplete" id="app_search_title">
+                <input
+                  v-model="search"
+                  id="STR"
+                  type="text"
+                  placeholder="Поиск"
+                  autocomplete="off"
+                  name="q"
+                  value=""
+                />
+                <div
+                  class="easy-autocomplete-container"
+                  id="eac-container-site-search"
+                >
+                  <ul style="display: block" v-show="result.length > 0">
+                    <li
+                      v-for="item in result"
+                      class="js_text-select"
+                      v-on:click="startSearch(item)"
+                    >
+                      <div class="eac-item">
+                        <div class="tags" v-html="item.IBLOCK.NAME"></div>
+                        <div class="text" v-html="item.TITLE_FORMATED"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="site-search__separator"></div>
+              <input type="hidden" id="IBLOCK" name="iblock" value="" />
+              <button
+                id="start-search"
+                class="btn btn-sm btn-icon-right site-search__button"
+              >
+                Найти <i class="icon-arrow-right"></i>
+              </button>
+            </form>
+            <div class="search-examples" data-search="examples">
+              <strong>Пример:</strong>
+              <strong>Пример:</strong>
+              <span>Математическая модель закона Бернули</span> или
+              <span>Журнал "Молодой учёный"</span>
+            </div>
+            <div class="search-modal__close">
+              <button class="btn-sm" data-role="close-modal">закрыть</button>
+            </div>
+          </div>
+          <div class="site-map" data-collapse="root">
+            <div
+              class="site-map__header"
+              data-collapse="toggle"
+              data-collapse-class="site-map--opened"
+            >
+              Карта сайта
+            </div>
+            <div
+              class="site-map__content"
+              data-collapse="content"
+              style="display: none; opacity: 0"
+            >
+              <div>
+                <a href="../local/exe/mars-setup.exe">Скачать дистрибутив</a>
+              </div>
+              /* <div>
+                <a href="../models/">Примеры моделей</a>
+              </div> */
+              <div>
+                <a href="../publications.html">Публикации и материалы</a>
+              </div>
+              <div>
+                <a href="../news.html">Новости</a>
+              </div>
+              <div>
+                <a href="../contacts.html">Контакты</a>
+              </div>
+              /* <div>
+                <a href="../tch/">Запрос ТКП</a>
+              </div> */
+              <div>
+                <a href="../forum.html">Форум</a>
+              </div>
+              <div>
+                <a href="../instructions.html">Справка</a>
+              </div>
+              /* <div>
+                <a href="../faq/">FAQ</a>
+              </div> */
+              /* <div>
+                <a href="../library/">Библиотеки</a>
+              </div> */
+              <div>
+                <a href="../projects.html">Проекты</a>
+              </div>
+              /* <div>
+                <a href="../sitemap/">Карта сайта</a>
+              </div> */
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal requirements-modal" data-modal-type="requirements">
+      <div class="container">
+        <header class="requirements-modal__header">
+          <div class="МАРС-logo-modal"></div>
+          <div class="close-button-white" data-role="close-modal"></div>
+        </header>
+        <div class="requirements-modal__body">
+          <div class="requirements-modal__title">Системные требования</div>
+          <div class="requirements-modal__text">
+            <div>
+              <p><strong>Минимальные системные требования:</strong></p>
+              <p>
+                Процессор: c двумя и более физическими ядрами, поддерживающий
+                технологию SSE2
+              </p>
+              <p>Видеокарта: GeForce 8600/ATI Radeon HD 4550M</p>
+              <p>Оперативная память: 2 ГБ для Windows 7/8/10</p>
+              <p>Операционная система: Windows 7/8/10</p>
+              <p>Место на диске: 40 ГБ</p>
+            </div>
+            <div>
+              <p><strong>Рекомендуемые системные требования:</strong></p>
+              <p>Процессор: Intel Core i5-7400 / AMD Ryzen 5 1500X</p>
+              <p>
+                Видеокарта: NVIDIA® GeForce GTX 1050 Ti 4 ГБ / NVIDIA® GeForce
+                GTX 1650 4 ГБ / Radeon RX 570 (4 ГБ)
+              </p>
+              <p>Оперативная память: 8 Гб</p>
+              <p>Операционная система: Windows 7/8/10 — 64-bit</p>
+              <p>Место на диске: 61.5 ГБ</p>
+              <p>
+                Скорость интернет-соединения: 1024 Кбит/с или выше (для работы
+                голосового чата)
+              </p>
+            </div>
+          </div>
+          <div class="center mt100">
+            <a data-role="close-modal" class="btn-sm">закрыть</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal download-modal" data-modal-type="download">
+      <div class="container">
+        <header class="download-modal__header">
+          <div class="МАРС-logo-modal-2"></div>
+          <div class="close-button-white" data-role="close-modal"></div>
+        </header>
+        <div id="comp_58ce54de7215a828d8230882ebd71566">
+          <form
+            class="download-modal__body"
+            action=""
+            id="FFD"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <input
+              type="hidden"
+              name="bxajaxid"
+              id="bxajaxid_58ce54de7215a828d8230882ebd71566_Ar8Szp"
+              value="58ce54de7215a828d8230882ebd71566"
+            /><input type="hidden" name="AJAX_CALL" value="Y" />
+            <div class="download-modal__title">Скачать программу</div>
+
+            <div class="download-modal__form-top">
+              <select name="FFD[PROP][LICENSE]" id="">
+                <option value="210">
+                  МАРС - 64 битная версия для ОС Windows 7 и выше
+                </option>
+                <option value="212">
+                  МАРС - 32 битная версия для ОС Windows 7 и выше
+                </option>
+                <option value="254">
+                  МАРС - 32 битная версия для ОС Windows XP
+                </option>
+                <option value="2998">
+                  МАРС - 64 битная Английская версия для ОС Windows 7 и
+                  выше
+                </option>
+                <option value="211">
+                  МАРС - 32 битная Английская версия для ОС Windows 7 и
+                  выше
+                </option>
+                <option value="2561">
+                  МАРС - Бета-версия для OC Linux
+                </option>
+                <option value="251">Пакет компиляторов</option>
+                <option value="19995">NordWind - ОС Linux</option>
+              </select>
+            </div>
+            <div class="download-modal__form js_company">
+              <input
+                type="text"
+                placeholder="фамилия*"
+                required
+                name="FFD[PROP][SECOND_NAME]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="имя"
+                name="FFD[PROP][NAME]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="отчество"
+                name="FFD[PROP][LAST_NAME]"
+                value=""
+              />
+
+              <div class="switch-wrap">
+                <span
+                  onclick="$(this).parents('.download-modal__form').addClass('js_company');"
+                  class="switch-label switch-label--active"
+                  >Компания</span
+                >
+                <span
+                  onclick="$(this).parents('.download-modal__form').toggleClass('js_company');"
+                  class="switch"
+                  data-switch-name="ttt"
+                  data-value-left="left"
+                  data-value-right="right"
+                  ><input type="hidden" name="FFD[PROP][TYPE]" value="Компания"
+                /></span>
+                <span
+                  onclick="$(this).parents('.download-modal__form').removeClass('js_company');"
+                  class="switch-label"
+                  >Учебное заведение</span
+                >
+              </div>
+
+              <div class="switch-wrap switch-wrap--university">
+                <span class="switch-label switch-label--active"
+                  >Преподаватель</span
+                >
+                <span
+                  class="switch"
+                  data-switch-name="ttt"
+                  data-value-left="left"
+                  data-value-right="right"
+                  ><input
+                    type="hidden"
+                    name="FFD[PROP][UNIVERSITY_TYPE]"
+                    value="Преподаватель"
+                /></span>
+                <span class="switch-label">Студент/Аспирант</span>
+              </div>
+
+              <div
+                id="download_app_university_input"
+                tabindex="0"
+                @focusout="handleFocusOut"
+              >
+                <input
+                  type="text"
+                  placeholder="название организации*"
+                  v-model="input"
+                  name="FFD[PROP][ORGANIZATION]"
+                  required
+                  value=""
+                />
+                <ul class="freeware-form__results" v-if="input && show">
+                  <li
+                    class="freeware-form__result"
+                    v-for="(element, index) in result"
+                    v-html="element.format"
+                    @click="input = element.original; show = false"
+                  ></li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                placeholder="должность"
+                name="FFD[PROP][POSITION]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="эл. почта*"
+                name="FFD[PROP][EMAIL]"
+                required
+                value=""
+              />
+              <input
+                type="tel"
+                placeholder="телефон"
+                name="FFD[PROP][PHONE]"
+                value=""
+              />
+
+              <textarea
+                class="support-form__textarea"
+                rows="5"
+                placeholder="комментарий"
+                name="FFD[COMMENT]"
+              ></textarea>
+              <input
+                type="hidden"
+                name="recaptcha_response"
+                id="FFDrecaptchaResponse"
+              />
+              <div class="bottom-bid__buttons-agreement">
+                <input
+                  type="checkbox"
+                  required=""
+                  id="FFD_check"
+                  onclick="$('#FFD_but').prop('disabled', function(i, v) { if(this.checked) {return false} else {return true}; }.bind(this) );"
+                />
+                <label for="FFD_check" class="custom-checkbox">
+                  Настоящим даю свое согласие на обработку персональных данных в
+                  соответствии с&nbsp;
+                  <a href="../upload/policy2.pdf" target="_blank"
+                    >политикой обработки персональных данных</a
+                  >&nbsp; и&nbsp;
+                  <a href="../policy.pdf" target="_blank"
+                    >политикой конфиденциальности</a
+                  >&nbsp; ООО "3ВС"
+                </label>
+              </div>
+            </div>
+
+            <div class="center mt10">
+              <button
+                id="FFD_but"
+                name="FFD[SUBMIT]"
+                class="btn-sm btn-orange"
+                value="button"
+              >
+                продолжить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal image-viewer" data-modal-type="image-viewer">
+      <a class="image-viewer__close" data-role="close-modal"></a>
+      <div class="image-viewer__card"></div>
+      <div class="image-viewer__dots">
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot image-viewer__dot--active"></span>
+      </div>
+    </div>
+
+    <script>
+        let clicked = false
+
+        $("#menu-ham").click(() => {
+            // main-mobile-menu--active
+            if (!clicked) {
+                $(".main-mobile-menu").addClass("main-mobile-menu--active");
+                $(".main-mobile-menu").css('opacity', '1');
+                clicked = true
+            }
+            else {
+                clicked = false
+                $(".main-mobile-menu").removeClass("main-mobile-menu--active");
+                $(".main-mobile-menu").css('opacity', '0');
+            }
+        })
+
+    </script>
+
+
+<script>
+    let clicked_download = false
+
+    $("#d123").click(() => {
+        // main-mobile-menu--active
+        if (!clicked_download) {
+            $(".download-modal").addClass("modal--opened");
+            $(".download-modal").css('opacity', '1');
+            clicked_download = true
+        }
+        else {
+            clicked_download = false
+            $(".download-modal").removeClass("modal--opened");
+            $(".download-modal").css('opacity', '0');
+        }
+    })
+
+</script>
+
+
+
+<script>
+
+    function download() {
+        window.location.href = "https://disk.yandex.ru/client/disk/%D0%9E%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%9C%D0%90%D0%A0%D0%A1/SE_MARS";
+    }
+
+
+</script>
+
+  </body>
+</html>

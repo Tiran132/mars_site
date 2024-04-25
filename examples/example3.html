@@ -1,0 +1,3736 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head
+    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+  >
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="СМ Марс" />
+    <meta name="description" content="СМ Марс" />
+    
+    <link
+      href="../style.css"
+      type="text/css"
+      data-template-style="true"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <!-- <link
+      type="image/png"
+      href="/local/templates/.default/img/favicon.png"
+      rel="icon"
+    /> -->
+
+    <link
+      href="../local/main.ttf"
+      as="font"
+      rel="preload"
+      crossorigin="anonymous"
+    />
+    <title>Среда моделирования МАРС</title>
+    <meta
+      property="og:title"
+      content="Среда динамического моделирования МАРС"
+    />
+    <meta
+      property="og:description"
+      content="МАРС  – Разработка математических моделей, алгоритмов управления, интерфейсов управления и автоматическая генерация кода для контроллеров управления и графических дисплеев - это основная задача среды разработки.      "
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://МАРС.ru/" />
+    <meta
+      property="og:image"
+      content="https://МАРС.ru/local/templates/.default/img/favicon.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family:Wingdings;
+      	panose-1:5 0 0 0 0 0 0 0 0 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 4 5 3 5 4 6 3 2 4;}
+      @font-face
+      	{font-family:Calibri;
+      	panose-1:2 15 5 2 2 2 4 3 2 4;}
+      @font-face
+      	{font-family:Georgia;
+      	panose-1:2 4 5 2 5 4 5 2 3 3;}
+      @font-face
+      	{font-family:"Segoe UI";
+      	panose-1:2 11 5 2 4 2 4 2 2 3;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      h1
+      	{mso-style-link:"Heading 1 Char1";
+      	margin-top:12.0pt;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:16.0pt;
+      	font-family:"Calibri Light",sans-serif;
+      	color:#2E74B5;
+      	font-weight:normal;}
+      h2
+      	{mso-style-link:"Heading 2 Char1";
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:18.0pt;
+      	font-family:"Times New Roman",serif;
+      	font-weight:bold;}
+      h3
+      	{mso-style-link:"Heading 3 Char1";
+      	margin-top:2.0pt;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:12.0pt;
+      	font-family:"Calibri Light",sans-serif;
+      	color:#1F4D78;
+      	font-weight:normal;}
+      h4
+      	{mso-style-link:"Heading 4 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:13.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      h5
+      	{mso-style-link:"Heading 5 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:12.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      h6
+      	{mso-style-link:"Heading 6 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+      	{mso-style-link:"Heading 7 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;
+      	font-style:italic;}
+        .MsoNormal span {
+          /* flex-direction: column; */
+          /* justify-content: center; */
+          /* display: flex; */
+        }
+      p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+      	{mso-style-link:"Heading 8 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:11.0pt;
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+      	{mso-style-link:"Heading 9 Char";
+      	margin-top:16.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	page-break-after:avoid;
+      	font-size:10.5pt;
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      p.MsoToc1, li.MsoToc1, div.MsoToc1
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc2, li.MsoToc2, div.MsoToc2
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:14.15pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc3, li.MsoToc3, div.MsoToc3
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:28.35pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc4, li.MsoToc4, div.MsoToc4
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:42.5pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc5, li.MsoToc5, div.MsoToc5
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:56.7pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc6, li.MsoToc6, div.MsoToc6
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:70.85pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc7, li.MsoToc7, div.MsoToc7
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:85.05pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc8, li.MsoToc8, div.MsoToc8
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:99.2pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoToc9, li.MsoToc9, div.MsoToc9
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.85pt;
+      	margin-left:113.4pt;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+      	{mso-style-link:"Footnote Text Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:2.0pt;
+      	margin-left:0in;
+      	font-size:9.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+      	{mso-style-link:"Comment Text Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	font-size:10.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoHeader, li.MsoHeader, div.MsoHeader
+      	{mso-style-link:"Header Char";
+      	margin:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoFooter, li.MsoFooter, div.MsoFooter
+      	{mso-style-link:"Footer Char1";
+      	margin:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoCaption, li.MsoCaption, div.MsoCaption
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	line-height:115%;
+      	font-size:9.0pt;
+      	font-family:"Calibri",sans-serif;
+      	color:#5B9BD5;
+      	font-weight:bold;}
+      p.MsoTof, li.MsoTof, div.MsoTof
+      	{margin:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      span.MsoFootnoteReference
+      	{vertical-align:super;}
+      span.MsoEndnoteReference
+      	{vertical-align:super;}
+      p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+      	{mso-style-link:"Endnote Text Char";
+      	margin:0in;
+      	font-size:10.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitle, li.MsoTitle, div.MsoTitle
+      	{mso-style-link:"Title Char";
+      	margin-top:15.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+      	{mso-style-link:"Title Char";
+      	margin-top:15.0pt;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+      	{mso-style-link:"Title Char";
+      	margin:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+      	{mso-style-link:"Title Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:24.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+      	{mso-style-link:"Subtitle Char";
+      	margin-top:10.0pt;
+      	margin-right:0in;
+      	margin-bottom:10.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:12.0pt;
+      	font-family:"Calibri",sans-serif;}
+      a:link, span.MsoHyperlink
+      	{color:#0563C1;
+      	text-decoration:underline;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:#954F72;
+      	text-decoration:underline;}
+      p
+      	{margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+      	{mso-style-link:"Comment Subject Char";
+      	margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	font-size:10.0pt;
+      	font-family:"Calibri",sans-serif;
+      	font-weight:bold;}
+      p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+      	{mso-style-link:"Balloon Text Char";
+      	margin:0in;
+      	font-size:9.0pt;
+      	font-family:"Segoe UI",sans-serif;}
+      p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+      	{margin:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:0in;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      p.MsoQuote, li.MsoQuote, div.MsoQuote
+      	{mso-style-link:"Quote Char";
+      	margin-top:0in;
+      	margin-right:.5in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;
+      	font-style:italic;}
+      p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+      	{mso-style-link:"Intense Quote Char";
+      	margin-top:0in;
+      	margin-right:.5in;
+      	margin-bottom:8.0pt;
+      	margin-left:.5in;
+      	line-height:107%;
+      	background:#F2F2F2;
+      	border:none;
+      	padding:0in;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;
+      	font-style:italic;}
+      p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+      	{margin-top:0in;
+      	margin-right:0in;
+      	margin-bottom:8.0pt;
+      	margin-left:0in;
+      	line-height:107%;
+      	font-size:11.0pt;
+      	font-family:"Calibri",sans-serif;}
+      span.Heading1Char
+      	{mso-style-name:"Heading 1 Char";
+      	font-family:"Arial",sans-serif;}
+      span.Heading2Char
+      	{mso-style-name:"Heading 2 Char";
+      	font-family:"Arial",sans-serif;}
+      span.Heading3Char
+      	{mso-style-name:"Heading 3 Char";
+      	font-family:"Arial",sans-serif;}
+      span.Heading4Char
+      	{mso-style-name:"Heading 4 Char";
+      	mso-style-link:"Heading 4";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      span.Heading5Char
+      	{mso-style-name:"Heading 5 Char";
+      	mso-style-link:"Heading 5";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      span.Heading6Char
+      	{mso-style-name:"Heading 6 Char";
+      	mso-style-link:"Heading 6";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;}
+      span.Heading7Char
+      	{mso-style-name:"Heading 7 Char";
+      	mso-style-link:"Heading 7";
+      	font-family:"Arial",sans-serif;
+      	font-weight:bold;
+      	font-style:italic;}
+      span.Heading8Char
+      	{mso-style-name:"Heading 8 Char";
+      	mso-style-link:"Heading 8";
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      span.Heading9Char
+      	{mso-style-name:"Heading 9 Char";
+      	mso-style-link:"Heading 9";
+      	font-family:"Arial",sans-serif;
+      	font-style:italic;}
+      span.TitleChar
+      	{mso-style-name:"Title Char";
+      	mso-style-link:Title;}
+      span.SubtitleChar
+      	{mso-style-name:"Subtitle Char";
+      	mso-style-link:Subtitle;}
+      span.QuoteChar
+      	{mso-style-name:"Quote Char";
+      	mso-style-link:Quote;
+      	font-style:italic;}
+      span.IntenseQuoteChar
+      	{mso-style-name:"Intense Quote Char";
+      	mso-style-link:"Intense Quote";
+      	font-style:italic;}
+      span.HeaderChar
+      	{mso-style-name:"Header Char";
+      	mso-style-link:Header;}
+      span.FooterChar
+      	{mso-style-name:"Footer Char";}
+      span.FooterChar1
+      	{mso-style-name:"Footer Char1";
+      	mso-style-link:Footer;}
+      span.FootnoteTextChar
+      	{mso-style-name:"Footnote Text Char";
+      	mso-style-link:"Footnote Text";}
+      span.EndnoteTextChar
+      	{mso-style-name:"Endnote Text Char";
+      	mso-style-link:"Endnote Text";}
+      span.docdata
+      	{mso-style-name:docdata;}
+      span.CommentTextChar
+      	{mso-style-name:"Comment Text Char";
+      	mso-style-link:"Comment Text";}
+      span.CommentSubjectChar
+      	{mso-style-name:"Comment Subject Char";
+      	mso-style-link:"Comment Subject";
+      	font-weight:bold;}
+      span.BalloonTextChar
+      	{mso-style-name:"Balloon Text Char";
+      	mso-style-link:"Balloon Text";
+      	font-family:"Segoe UI",sans-serif;}
+      span.Heading2Char1
+      	{mso-style-name:"Heading 2 Char1";
+      	mso-style-link:"Heading 2";
+      	font-family:"Times New Roman",serif;
+      	font-weight:bold;}
+      span.mw-editsection-bracket
+      	{mso-style-name:mw-editsection-bracket;}
+      span.mw-editsection-divider
+      	{mso-style-name:mw-editsection-divider;}
+      p.toclevel-1, li.toclevel-1, div.toclevel-1
+      	{mso-style-name:toclevel-1;
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      span.tocnumber
+      	{mso-style-name:tocnumber;}
+      span.toctext
+      	{mso-style-name:toctext;}
+      span.mw-headline
+      	{mso-style-name:mw-headline;}
+      span.Heading1Char1
+      	{mso-style-name:"Heading 1 Char1";
+      	mso-style-link:"Heading 1";
+      	font-family:"Calibri Light",sans-serif;
+      	color:#2E74B5;}
+      span.mw-page-title-main
+      	{mso-style-name:mw-page-title-main;}
+      span.approvedandlatestmsg
+      	{mso-style-name:approvedandlatestmsg;}
+      span.nowrap
+      	{mso-style-name:nowrap;}
+      p.toclevel-2, li.toclevel-2, div.toclevel-2
+      	{mso-style-name:toclevel-2;
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      span.Heading3Char1
+      	{mso-style-name:"Heading 3 Char1";
+      	mso-style-link:"Heading 3";
+      	font-family:"Calibri Light",sans-serif;
+      	color:#1F4D78;}
+      span.citation
+      	{mso-style-name:citation;}
+      span.wrap
+      	{mso-style-name:wrap;}
+      p.docy, li.docy, div.docy
+      	{mso-style-name:"docy\,v5\,15489\,bqiaagaaeyqcaaagiaiaaamtmgaabtm6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+      	margin-right:0in;
+      	margin-left:0in;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman",serif;}
+      .MsoChpDefault
+      	{font-family:"Calibri",sans-serif;}
+      .MsoPapDefault
+      	{margin-bottom:8.0pt;
+      	line-height:107%;}
+       /* Page Definitions */
+       @page WordSection1
+      	{size:595.3pt 841.9pt;
+      	margin:56.7pt 42.5pt 56.7pt 85.05pt;}
+      div.WordSection1
+      	{page:WordSection1;}
+       /* List Definitions */
+       ol
+      	{margin-bottom:0in;}
+      ul
+      	{margin-bottom:0in;}
+      -->
+    </style>
+  </head>
+  <body data-preloader="" class="">
+    <noscript>
+      <div class="no-script-warning">
+        К сожалению, ваш браузер <strong>не поддерживает</strong> JavaScript.
+        Пожалуйста,
+        <a href="http://browsehappy.com/" target="_blank" rel="nofollow"
+          >обновите</a
+        >
+        ваш браузер или включите поддержку JavaScript для корректного
+        отображения страницы.
+      </div>
+    </noscript>
+
+    <header class="main-header container" style="overflow: hidden;">
+      <a
+        class="МАРС-logo"
+        href="../index.html"
+        style="
+            text-decoration: none;
+            font-size: 56px;
+            color: #000;
+            font-weight: bold;
+        "
+      >СМ Марс</a>
+
+
+      
+      <div class="main-header__search">
+        <!-- <a data-modal-trigger="search"><i class="icon-search"></i></a> -->
+      </div>
+      <div class="hamburger hamburger--squeeze js-mobile-menu" id="menu-ham">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-localization__wrap">
+      <div class="header-localization__list">
+        <a href="javascript:void(0);" class="header-localization__item active">
+          <img
+            class="header-localization__item-img"
+            src="../local/i-rus.svg"
+            alt="Русский"
+          />
+          <p class="header-localization__item-name">Русский</p>
+          <p class="header-localization__item-description">Россия и СНГ</p>
+        </a>
+        <a href="https://en.МАРС.ru/" class="header-localization__item">
+          <img
+            class="header-localization__item-img"
+            src="../local/i-eng.svg"
+            alt="English"
+          />
+          <p class="header-localization__item-name">English</p>
+          <p class="header-localization__item-description">usa</p>
+        </a>
+        <!-- <a href="javascript:void(0);" class="header-localization__item">
+            <img class="header-localization__item-img" src="/local/templates/.default/img/i-deu.svg" alt="Deutsch"/>
+            <p class="header-localization__item-name">Deutsch</p>
+            <p class="header-localization__item-description">Deutschland (Germany)</p>
+        </a> -->
+      </div>
+    </div>
+
+    <div class="wide-border"></div>
+
+    <nav class="main-menu container">
+      <ul>
+        <li class="active">
+          <a href="../index.html">О СМ МАРС</a>
+        </li>
+        <li class="">
+          <a data-modal-trigger="download" href="../local/exe/mars-setup.exe">Скачать дистрибутив</a>
+        </li>
+        <li class="">
+          <a href="../publications.html">Публикации и материалы</a>
+        </li>
+        <li class="">
+          <a href="../projects.html">Проекты</a>
+        </li>
+        <li class="">
+          <a href="../news.html">Новости</a>
+        </li>
+        <li class="">
+          <a href="../instructions.html"
+            >Справка</a
+          >
+        </li>
+        <li class="">
+          <a href="../contacts.html">Контакты</a>
+        </li>
+        <li class="">
+          <a href="../forum.html">Форум</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <nav class="main-mobile-menu">
+      <ul>
+        <li class="active">
+          <a href="../index.html">О СМ МАРС</a>
+        </li>
+        <li class="">
+          <a data-modal-trigger="download" href="../local/exe/mars-setup.exe">Скачать дистрибутив</a>
+        </li>
+        <li class="">
+          <a href="../publications.html">Публикации и материалы</a>
+        </li>
+        <li class="">
+          <a href="../projects.html">Проекты</a>
+        </li>
+        <li class="">
+          <a href="../news.html">Новости</a>
+        </li>
+        <li class="">
+          <a href="../instructions.html"
+            >Справка</a
+          >
+        </li>
+        <li class="">
+          <a href="../contacts.html">Контакты</a>
+        </li>
+        <li class="">
+          <a href="../forum.html">Форум</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main-intro bg-image-gear">
+        <div class="container">
+          
+          <div class="WordSection1">
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Построение временных и частотных характеристик систем автоматического
+          управления в среде моделирования МАРС</span
+        >
+      </p>
+
+      <p class="MsoNormal">
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Задача</span
+          ></b
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Пусть необходимо построить переходную и частотные характеристики
+          системы автоматического управления (САУ), структурная схема которой
+          представлена на рисунке 1, а также определить установившееся значение,
+          время переходного процесса, перерегулирование, резонансную частоту,
+          частоту среза ЛАХ и фазу при частоте среза ЛАЧХ при изменении
+          коэффициента демпфирования колебательного звена.</span
+        >
+      </p>
+
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="436"
+            height="97"
+            id="Рисунок 1"
+            src="../local/example_imgs/example3/image001.png"
+        /></span>
+      </p>
+
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 1 – Структурная схема исследуемой САУ</span
+        >
+      </p>
+
+      <p class="MsoNormal">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         Даны следующие значения параметров звеньев:</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpFirst"
+        style="margin-left: 71.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: Symbol"
+          >·<span style="font: 7pt 'Times New Roman'"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Пропорциональное звено</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 107.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: 'Courier New'"
+          >o<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Коэффициент усиления – 0.5</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 71.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: Symbol"
+          >·<span style="font: 7pt 'Times New Roman'"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Апериодическое звено</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 107.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: 'Courier New'"
+          >o<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Коэффициент усиления – 3</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 107.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: 'Courier New'"
+          >o<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Постоянная времени – 0.5 с<sup>-1</sup></span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 71.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: Symbol"
+          >·<span style="font: 7pt 'Times New Roman'"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Колебательное звено</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 107.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: 'Courier New'"
+          >o<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Коэффициент усиления – 1</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 107.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: 'Courier New'"
+          >o<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Постоянная времени – 0.2 с<sup>-1</sup></span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 107.25pt; text-indent: -0.25in"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; line-height: 107%; font-family: 'Courier New'"
+          >o<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span></span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Коэффициент демпфирования – 0.5</span
+        >
+      </p>
+
+      <p class="MsoListParagraphCxSpMiddle" style="margin-left: 107.25pt">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p class="MsoListParagraphCxSpMiddle" style="text-indent: -0.25in">
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Шаг 1.<span style="font: 7pt 'Times New Roman'"
+              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Формирование модели САУ</span
+          ></b
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="margin-left: 0.75in; text-align: justify; text-indent: -0.5in"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >1.1.<span style="font: 7pt 'Times New Roman'"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span></span
+            ></i
+          ></b
+        ><b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >Открытие среды моделирования МАРС</span
+            ></i
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >.
+          </span></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для запуска приложения «Среда моделирования МАРС» воспользуйтесь
+          соответствующим ярлыком на рабочем столе, который показан на рисунке 2
+          или пунктом «Среда моделирования МАРС» в папке </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Revicom</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >, находящейся в главном меню операционной системы </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Windows</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >, представленной на рисунке 3.</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="
+          margin-top: 0in;
+          margin-right: 0in;
+          margin-bottom: 0in;
+          margin-left: 22.5pt;
+          line-height: normal;
+        "
+      >
+        <span lang="RU"
+          ><img
+            width="169"
+            height="221"
+            id="Рисунок 4"
+            src="../local/example_imgs/example3/image002.png"
+            alt="Изображение выглядит как текст, снимок экрана, небо, облако&#10;&#10;Автоматически созданное описание" /></span
+        ><img
+          width="325"
+          height="220"
+          id="Рисунок 2"
+          src="../local/example_imgs/example3/image003.jpg"
+          alt="Изображение выглядит как текст, снимок экрана, программное обеспечение, дисплей&#10;&#10;Автоматически созданное описание"
+        />
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        style="
+          margin-top: 0in;
+          margin-right: 0in;
+          margin-bottom: 0in;
+          margin-left: 22.5pt;
+          line-height: normal;
+        "
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; font-family: 'Times New Roman', serif"
+          >Рисунок 2 – Запуск среды моделирования МАРС с рабочего стола</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpMiddle"
+        align="center"
+        style="
+          margin-top: 0in;
+          margin-right: 0in;
+          margin-bottom: 0in;
+          margin-left: 22.5pt;
+          text-align: center;
+          line-height: normal;
+        "
+      >
+        <span lang="RU"
+          ><img
+            width="208"
+            height="405"
+            id="Рисунок 3"
+            src="../local/example_imgs/example3/image004.png"
+            alt="Изображение выглядит как текст, снимок экрана, программное обеспечение, Мультимедийное программное обеспечение&#10;&#10;Автоматически созданное описание"
+        /></span>
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpLast"
+        align="center"
+        style="
+          margin-top: 0in;
+          margin-right: 0in;
+          margin-bottom: 0in;
+          margin-left: 22.5pt;
+          text-align: center;
+          line-height: normal;
+        "
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; font-family: 'Times New Roman', serif"
+          >Рисунок 3 – Запуск среды моделирования МАРС из меню</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="margin-bottom: 0in; text-align: justify; line-height: normal"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; font-family: 'Times New Roman', serif"
+          >&nbsp;</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-bottom: 0in;
+          text-align: justify;
+          text-indent: 22.5pt;
+          line-height: normal;
+        "
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; font-family: 'Times New Roman', serif"
+          >В результате будет открыто основное окно среды моделирования МАРС,
+          представленное на рисунке 4.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-bottom: 0in; text-align: center; line-height: normal"
+      >
+        <span lang="RU"
+          ><img
+            width="623"
+            height="375"
+            id="Рисунок 6"
+            src="../local/example_imgs/example3/image005.jpg"
+            alt="Изображение выглядит как снимок экрана, текст, программное обеспечение, компьютер&#10;&#10;Автоматически созданное описание"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-bottom: 0in; text-align: center; line-height: normal"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; font-family: 'Times New Roman', serif"
+          >Рисунок 4 – Основное окно среды моделирования МАРС</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpFirst"
+        style="margin-left: 0.75in; text-align: justify"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >&nbsp;</span
+            ></i
+          ></b
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpLast"
+        style="margin-left: 0.75in; text-align: justify; text-indent: -0.5in"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >1.2.<span style="font: 7pt 'Times New Roman'"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span></span
+            ></i
+          ></b
+        ><b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >Открытие новой схемы.
+            </span></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Чтобы открыть новую схему, можно воспользоваться пунктом Создать
+          схему в пункте Создать меню Файл или воспользоваться кнопкой
+          <img
+            width="22"
+            height="23"
+            id="Рисунок 7"
+            src="../local/example_imgs/example3/image006.png"
+          /> на панели инструментов Стандартная. В результате проделанной
+          операции будет открыта новая схема, представленная на рисунке 5.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-bottom: 0in; text-align: center; line-height: normal"
+      >
+        <span lang="RU"
+          ><img
+            width="516"
+            height="317"
+            id="Рисунок 9"
+            src="../local/example_imgs/example3/image007.jpg"
+            alt="Изображение выглядит как текст, снимок экрана, программное обеспечение, компьютер&#10;&#10;Автоматически созданное описание"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-bottom: 0in; text-align: center; line-height: normal"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; font-family: 'Times New Roman', serif"
+          >Рисунок 5 – Открытие новой схемы в среде моделирования МАРС</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpFirst"
+        style="margin-left: 0.75in; text-align: justify"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >&nbsp;</span
+            ></i
+          ></b
+        >
+      </p>
+
+      <p
+        class="MsoListParagraphCxSpLast"
+        style="margin-left: 0.75in; text-align: justify; text-indent: -0.5in"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1.3.<span style="font: 7pt 'Times New Roman'"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span
+        ><b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >Формирование модели объектного уровня.
+            </span></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >На объектном уровне формируется компьютерная модель исследуемой САУ
+          из компонентов, находящихся в папке <b>САУ -&gt; Линейные САУ</b>,
+          представленной на рисунке 6.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.25in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="366"
+            height="385"
+            id="Рисунок 14"
+            src="../local/example_imgs/example3/image008.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.25in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 6 – Дерево компонентов САУ</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.25in">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >     На рисунке 7 приведена сформированная модель объектного уровня
+          без подключенных источников и измерительных компонентов.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.25in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="557"
+            height="240"
+            id="Рисунок 11"
+            src="../local/example_imgs/example3/image009.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.25in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 7 – Компьютерная модель САУ на объектном уровне
+          многоуровневой компьютерной модели</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraph"
+        style="text-align: justify; text-indent: -0.25in"
+      >
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Шаг 2.<span style="font: 7pt 'Times New Roman'"
+              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Анализ САУ во временной области.</span
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+        >
+          Анализ САУ во временной области заключается в построении и
+          исследовании переходной и/или импульсной характеристики, а также
+          определении на ее основе показателей качества переходного процесса, к
+          которым относятся установившееся значение, максимальное значение,
+          время переходного процесса, перерегулирование и другие. Среда МАРС
+          позволяет одновременно построить временную характеристику и определить
+          необходимые показатели качества переходного процесса.
+        </span>
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >2.1 Установка источника входного сигнала.</span
+            ></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+        >
+          Для построения переходной характеристики САУ необходимо на её вход
+          подключить источник единичного сигнала, находящийся в папке
+          <b>САУ -&gt; Источники САУ</b>, представленной на рисунке 8.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <u
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            ><img
+              width="362"
+              height="234"
+              id="Рисунок 17"
+              src="../local/example_imgs/example3/image010.png" /></span
+        ></u>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 8 – Содержание папки САУ -&gt; Источники САУ</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Установив источник единичного сигнала ко входу исследуемой системы,
+          получим её модель, представленную на рисунке 9.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="557"
+            height="241"
+            id="Рисунок 16"
+            src="../local/example_imgs/example3/image011.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 9 – Компьютерная модель САУ</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >2.2 Установка измерительного компонента</span
+            ></i
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >.</span
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+        >
+          Для измерения информационных сигналов, циркулирующих в исследуемых
+          системах автоматического управления, используется измеритель
+          информационного сигнала, находящийся в папке <b>САУ</b>,
+          представленной  на рисунке 8. Он на каждом шаге по времени измеряет
+          текущее значение потенциальной переменной в узле, к которому этот
+          измеритель подключен, и передает это значение вместе со значением
+          времени с объектного слоя модели на её логический слой. При частотном
+          анализе измеритель информационного сигнала выбирает из вектора решения
+          цепи действительную и мнимую составляющие измеряемой переменной,
+          формирует точку согласно заданной в атрибутах компонента
+          характеристике и передает ее дальше для обработки и визуализации.
+          Подключив один измеритель к выходу исследуемой системы для
+          исследования выходной величины, во второй – между сумматором и
+          пропорциональным звеном </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >KI</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1 для исследования ошибки, получим компонентную цепь, приведенную на
+          рисунке 10.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="557"
+            height="240"
+            id="Рисунок 18"
+            src="../local/example_imgs/example3/image012.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 10 – Компьютерная модель САУ с подключенным источником и
+          измерительными компонентами</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >2.3. Подключение графика.
+            </span></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для построения временных характеристик указанных сигналов к
+          измерителям информационного сигнала </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >VI</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1 и </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >VI</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >2, имеющим свои отображения как на объектном, так и на логическом
+          слоях многослойного редактора, необходимо подключить компонент
+          «График». Он находится в папке
+          <b>Визуальные компоненты -&gt; Визуальные компоненты </b></span
+        ><b
+          ><span
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >L</span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >-</span
+          ></b
+        ><b
+          ><span
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >V</span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+          >
+            -&gt; Прочие</span
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >, которая приведена на рисунке 11.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span lang="RU"
+          ><img
+            width="302"
+            height="334"
+            id="Рисунок 20"
+            src="../local/example_imgs/example3/image013.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 11 – Содержание папки Визуальные компоненты -&gt; Визуальные
+          компоненты L-V -&gt; Прочие</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="margin-left: 0.5in; text-align: justify; text-indent: 34.8pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >При установке компонента График на логический или объектный слой
+          редактора у него будет один свободный пин для образования связи с
+          компонентами, передающими данные для построения различных зависимостей
+          (см. рисунок 12).
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center; text-indent: 34.8pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="275"
+            height="255"
+            id="Рисунок 21"
+            src="../local/example_imgs/example3/image014.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center; text-indent: 34.8pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 12 – Компонент График на логическом уровне многоуровневой
+          компьютерной модели</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="margin-left: 0.5in; text-align: justify; text-indent: 34.8pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >При соединении его свободного пина с пинами других компонентов всякий
+          раз у него будет появляться новый свободный пин. Соединив свободные
+          пины компонента График с измерителями информационных сигналов, получим
+          схему, представленную на рисунке 13.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: -0.55pt"
+      >
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            ><img
+              width="566"
+              height="270"
+              id="Рисунок 44"
+              src="../local/example_imgs/example3/image015.png" /></span
+        ></b>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center; text-indent: 34.8pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 13 – Логический уровень многоуровневой модели исследования
+          САУ</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >2.4 Задание параметров режима анализа</span
+            ></i
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >.
+          </span></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для построения временных характеристик САУ используется динамический
+          анализ во временной области. В среде МАРС выбор режима анализа и
+          задание его параметров осуществляется в окне <b> Настройка ядра</b>,
+          вкладка <b>Динамика</b> которого приведена на рисунке 14.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="492"
+            height="481"
+            id="Рисунок 13"
+            src="../local/example_imgs/example3/image016.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 0.5in; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 14 – Вкладка <b>Динамика</b> окна <b>Настройка ядра</b></span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Выбрав в качестве директивы анализа <b>Неявный метод Эйлера</b> и
+          задав значения параметров директивы, как показано на рисунке 14,
+          необходимо нажать на кнопку
+          <img
+            width="73"
+            height="21"
+            id="Рисунок 24"
+            src="../local/example_imgs/example3/image017.png"
+          />.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 0.5in; text-align: justify">
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >2.5. Построение временных характеристик.
+            </span></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для построения временных характеристик необходимо запустить режим
+          анализа сформированной компьютерной модели. Это можно сделать, нажав
+          на кнопку <b>Запуск </b
+          ><b
+            ><img
+              width="30"
+              height="25"
+              id="Рисунок 25"
+              src="../local/example_imgs/example3/image018.png"
+            /> </b
+          >или воспользоваться пунктом <b>Запуск </b>меню<b> Анализ. </b>В
+          результате этих действий в одном окне будут построены временные
+          диаграммы выходной переменной и ошибки управления, пример которых
+          продемонстрирован на рисунке 15.
+        </span>
+      </p>
+
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            ><img
+              width="623"
+              height="370"
+              id="Рисунок 19"
+              src="../local/example_imgs/example3/image019.jpg" /></span
+        ></b>
+      </p>
+
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 15 – Временные характеристик выходной величины (черный цвет)
+          и ошибки регулирования (зеленый цвет)</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >В окне <b>Обозначение</b> представлено соответствие между
+          изображенными графиками/характеристиками<b> </b>и измерительными
+          компонентами, с которых они сняты.
+        </span>
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Описание окна <b>График </b>и его функциональные<span
+            style="color: #7030a0"
+          >
+          </span
+          >возможности приводятся в разделе 4.5 инструкции к среде моделирования
+          МАРС.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; text-indent: 0.5in">
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >2.6. Определение параметров-функционалов переходного
+              процесса.</span
+            ></i
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+          >
+          </span></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для определения параметров-функционалов временных и частотных
+          характеристик исследуемых процессов, в том числе и переходных
+          процессов в рамках библиотеки моделей компонентов среды МАРС
+          реализованы блоки обработки данных, находящиеся в папке
+          <b>Компоненты языка МАК -&gt; Блоки обработки. </b>Содержание этой
+          папки представлено на рисунке 16.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 0.5in"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="305"
+            height="537"
+            id="Рисунок 12"
+            src="../local/example_imgs/example3/image020.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 0.5in"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 16 – Содержание папки Компоненты языка МАК -&gt; Блоки
+          обработки</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; text-indent: 0.5in">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Установим необходимые компоненты из этой папки на логический уровень
+          создаваемой многоуровневой модели и соединим их входной пин с пином
+          измерителя информационного сигнала </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >VI</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1, измеряющий выходную переменную исследуемой САУ. Соединим выходной
+          узел соответствующего блока обработки с отдельным цифровым табло,
+          находящимся в папке Визуальные компоненты -&gt; Визуальные компоненты
+          L-V -&gt; Прочие, представленной на рисунке 11. В результате этих
+          действий на логическом слое редактора получим схему, представленную на
+          рисунке 17<span style="color: #7030a0">.</span> Для большей
+          информативности визуального уровня изменим атрибут «Название
+          компонента» и каждого цифрового табло. Верхний пин каждого блока
+          обработки предназначен для подачи сигнала о начале очередного
+          одновариантного анализа при решении задач многовариантного анализа и
+          параметрической оптимизации моделей объектного уровня. Поэтому в этом
+          случае их можно оставить не подцепленными к пинам других
+          компонентов.</span
+        >
+      </p>
+
+      <p class="MsoNormal">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="624"
+            height="522"
+            id="Рисунок 28"
+            src="../local/example_imgs/example3/image021.png"
+        /></span>
+      </p>
+
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 17 – Логический уровень модели САУ для исследования её
+          временных характеристик</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; text-indent: 0.5in">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Расставив соответствующие цифровые табло на визуальном слое
+          редактора, перетаскивая их мышью, после запуска модели САУ на анализ
+          получим изображение визуального слоя, представленное на рисунке
+          18.</span
+        >
+      </p>
+
+      <span
+        lang="RU"
+        style="
+          font-size: 14pt;
+          line-height: 107%;
+          font-family: 'Times New Roman', serif;
+        "
+        ><br clear="all" style="page-break-before: always" />
+      </span>
+
+      <p class="MsoNormal">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="text-align: justify; text-indent: 0.5in">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 0.5in"
+      >
+        <b
+          ><span
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            ><img
+              width="557"
+              height="240"
+              id="Рисунок 22"
+              src="../local/example_imgs/example3/image022.png" /></span
+        ></b>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="text-align: center; text-indent: 0.5in"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 18 ­– Результаты работы блоков обработки на визуальном слое
+          многослойного редактора</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraph"
+        style="text-align: justify; text-indent: -0.25in"
+      >
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Шаг 3.<span style="font: 7pt 'Times New Roman'"
+              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Анализ модели САУ в частотной области.
+          </span></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Анализ САУ в частотной области предполагает построение всех частотных
+          характеристик, а также определение таких показателей качества
+          функционирования, к которым относятся резонансная частота, частота
+          среза, фаза при частоте среза, запасы устойчивости по амплитуде и
+          фазе. Инструментальные средства среды моделирования МАРС обеспечивают
+          одновременное построение всех частотных характеристик и определение
+          перечисленных показателей качества. Для этого необходимо выполнить
+          следующие действия.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="margin-left: 35.45pt; text-align: justify; text-indent: 0.55pt"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >3.1 Установка источника входного сигнала.
+            </span></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для исследования САУ в частотной области на вход её модели,
+          представленной на объектном уровне многоуровневой компьютерной модели,
+          необходимо подключить источник синусоидальный. Он находится в папке
+          <b>САУ -&gt; Источники САУ, </b>представленной на рисунке 8. В
+          результате этих действий модель должна выглядеть примерно так, как
+          показано на рисунке 19.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="557"
+            height="241"
+            id="Рисунок 27"
+            src="../local/example_imgs/example3/image023.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 19 – Подключение источника синусоидального ко входу модели
+          САУ</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="margin-left: 35.45pt; text-align: justify; text-indent: 0.55pt"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >3.2 Подключение измерительных компонентов.
+            </span></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для построения всех необходимых частотных характеристик и их
+          совместного исследования подключим к выходному узлу модели САУ
+          одновременно пять измерителей информационного сигнал ил папки
+          <b>САУ</b> дерева компонентов, представленного на рисунке 8. В
+          свойствах каждого из компонентов в качестве значения атрибута «Вид
+          частотной характеристики» выберем подлежащую построению с его помощью
+          характеристику. В результате модель объектного уровня должна быть
+          такой, как показано на рисунке 20.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="598"
+            height="332"
+            id="Рисунок 30"
+            src="../local/example_imgs/example3/image024.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 20 – Модель САУ для построения и исследования частотных
+          характеристик</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="margin-left: 35.45pt; text-align: justify; text-indent: 0.55pt"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >3.3 Подключение измерительных компонентов к компоненту
+              График.</span
+            ></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+        >
+          Установленные на шаге 3.2 измерительные компоненты имеют свои
+          отображения на объектном и на логическом слоях редактора. На
+          логическом слое редактора подключим к каждому из них отдельный
+          компонент «График», находящийся в папке
+          <b>Визуальные компоненты -&gt; Визуальные компоненты </b></span
+        ><b
+          ><span
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >L</span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >-</span
+          ></b
+        ><b
+          ><span
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >V</span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+          >
+            -&gt; Прочие</span
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >. В результате этих действий получим модель, представленную на
+          рисунке 21.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="489"
+            height="388"
+            id="Рисунок 15"
+            src="../local/example_imgs/example3/image025.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 21 – Логический уровень модели САУ для построения частотных
+          характеристик</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="margin-left: 35.45pt; text-align: justify; text-indent: 0.55pt"
+      >
+        <b
+          ><i
+            ><span
+              lang="RU"
+              style="
+                font-size: 14pt;
+                line-height: 107%;
+                font-family: 'Times New Roman', serif;
+              "
+              >3.4 Построение частотных характеристик.
+            </span></i
+          ></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Чтобы убедиться в работоспособности системы построим частотные
+          характеристики исследуемой САУ. Для этого вызовем окно
+          <b>Настройка ядра,</b> в нём перейдём на вкладку
+          <b>Частотный анализ, </b>выберем директиву <b>АЧХ </b>и зададим
+          частотный диапазон и шаг, с которым будет измеряться частота при
+          расчете частотных характеристик. При этом рекомендуется начальную
+          частоту также указывать отличную от 0. На рисунке 22 приведена вкладка
+          <b>Частотный анализ</b> с настроенными параметрами.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="492"
+            height="481"
+            id="Рисунок 5"
+            src="../local/example_imgs/example3/image026.png"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center; text-indent: 0.55pt"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 22 – Окно «Частотный анализ» окна настройки ядра</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-indent: 0.55pt">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >На рисунке 23 представлены построенные частотные характеристики
+          исследуемой модели САУ.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-bottom: 0in; text-align: center; line-height: normal"
+      >
+        <span
+          lang="RU"
+          style="font-size: 14pt; font-family: 'Times New Roman', serif"
+          ><img
+            width="527"
+            height="323"
+            id="Рисунок 32"
+            src="../local/example_imgs/example3/image027.png"
+            alt="Изображение выглядит как текст, снимок экрана, диаграмма, линия&#10;&#10;Автоматически созданное описание"
+        /></span>
+      </p>
+
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 23 – Результаты построения частотных характеристик
+          исследуемой САУ</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >        
+          <b
+            ><i
+              >3.5 Определение параметров-функционалов частотных характеристик.
+            </i></b
+          >Для определения резонансной частоты, частоты среза ЛАЧХ и фазы при
+          этой частоте на логическом уровне редактора необходимо выполнить
+          следующие действия:</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         1. Так как резонансная частота – это частота, на которой
+          наблюдается максимальное значение амплитудно-частотной характеристики
+          (АЧХ), то для ее определения следует использовать компонент
+          <b>Время наступления максимума</b>, находящийся в папке
+          <b>Компоненты языка МАК -&gt; Блоки обработки. </b>На логическом слое
+          модели этот компонент называется </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >TMAX</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1. Соединим его с выходным пином компонента АЧХ.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         2. Для определения частоты среда необходимо использовать
+          компонент <b>Частота среза ЛАЧХ</b>, который находится в этой же
+          папке. Этот компонент на логическом слое модели носит название </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >w</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >_</span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >cuttof</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >1. Подсоединим входной пин этого компонента, находящийся слева, к
+          компоненту ЛАХ.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         3. Определение фазы при частоте среда осуществляется
+          компонентом <b>Фаза при частоте среза ЛАЧХ. </b>Установим этот
+          компонент на логический слой модели. При этом он получит название </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >F</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >(</span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >w</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >_</span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >cuttof</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >)1. Подключим входной пин, находящийся слева от компонента, к
+          компоненту ЛАХ, а верхний пин к компоненту ФЧХ.</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >         4. К выходным пинам перечисленных компонентов установим
+          цифровые табло, которые назовем соответственно «Резонансная частота»,
+          «Частота среза ЛАЧХ», «Фаза при частоте среза».</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Проделав описанные действия, получим схему, представленную на рисунке
+          24.</span
+        >
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center"
+      >
+        <span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="623"
+            height="414"
+            id="Рисунок 10"
+            src="../local/example_imgs/example3/image028.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 24 – Логический уровень модели САУ для исследования её
+          частотных характеристик</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >В результате запуска модели на анализ с помощью пункта меню
+          <b>Анализ -&gt; Запуск</b> на визуальном уровне получим результаты
+          моделирования, представленные на рисунке 25.</span
+        >
+      </p>
+
+      <p class="MsoNormal" align="center" style="text-align: center">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          ><img
+            width="624"
+            height="269"
+            id="Рисунок 33"
+            src="../local/example_imgs/example3/image029.jpg"
+        /></span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        align="center"
+        style="margin-left: 35.45pt; text-align: center"
+      >
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Рисунок 25 – Результаты исследования частотных характеристик
+          САУ</span
+        >
+      </p>
+
+      <p
+        class="MsoListParagraph"
+        style="text-align: justify; text-indent: -0.25in"
+      >
+        <b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Шаг 4.<span style="font: 7pt 'Times New Roman'"
+              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span></span
+          ></b
+        ><b
+          ><span
+            lang="RU"
+            style="
+              font-size: 14pt;
+              line-height: 107%;
+              font-family: 'Times New Roman', serif;
+            "
+            >Сохранение исследуемой модели.
+          </span></b
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Для сохранения исследуемой модели для дальнейшего использования можно
+          воспользоваться пунктом <b>Сохранить </b>или <b>Сохранить как </b>в
+          меню <b>Файл</b> или сочетанием клавиш </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Ctrl</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >+</span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >S</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >. После этого, если имя файла не было задано, появится стандартное
+          диалоговое окно операционной системы </span
+        ><span
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >Windows</span
+        ><span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >, в котором необходимо будет задать имя файла и папку, в которой он
+          должен находиться.<b> </b
+        ></span>
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-align: justify">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p class="MsoNormal">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p class="MsoNormal">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+
+      <p class="MsoNormal" style="margin-left: 35.45pt; text-indent: 0.55pt">
+        <span
+          lang="RU"
+          style="
+            font-size: 14pt;
+            line-height: 107%;
+            font-family: 'Times New Roman', serif;
+          "
+          >&nbsp;</span
+        >
+      </p>
+    </div>
+          </div>
+      </section>
+
+
+
+
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__top">
+          
+            <div class="main-footer__col-1">
+              <ul>
+                <li class="">
+                  <a href="../local/exe/mars-setup.exe" data-modal-trigger="download">Скачать дистрибутив</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../models/">Примеры моделей</a>
+                </li> -->
+                <li class="">
+                  <a href="../publications.html">Публикации и материалы</a>
+                </li>
+                <li class="">
+                  <a href="../news.html">Новости</a>
+                </li>
+                <li class="">
+                  <a href="../contacts.html">Контакты</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../tch/">Запрос ТКП</a>
+                </li> -->
+              </ul>
+            </div>
+            <div class="main-footer__col-2">
+              <ul>
+                <li class="">
+                  <a href="../forum.html?PAGE_NAME=list&amp;FID=3">Форум</a>
+                </li>
+                <li class="">
+                  <a href="../instructions.html">Справка</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../faq/">FAQ</a>
+                </li> -->
+                <!-- <li class="">
+                  <a href="../library/">Библиотеки</a>
+                </li> -->
+                <li class="">
+                  <a href="../projects.html">Проекты</a>
+                </li>
+                <!-- <li class="">
+                  <a href="../sitemap/">Карта сайта</a>
+                </li> -->
+              </ul>
+            </div>
+            
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="main-footer__copy container">
+        © 2021 - ООО «3В Сервис»
+        <div class="impulsit">
+          Разработано:
+          <a
+            href="https://impulsit.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="impulsit-logo"></div>
+          </a>
+        </div>
+      </div> -->
+    </footer>
+    <div class="modal search-modal" data-modal-type="search">
+      <div class="container">
+        <header class="search-modal__header">
+          <div class="mars-logo"></div>
+          <div class="close-button" data-role="close-modal"></div>
+        </header>
+        <div class="search-modal__body" data-search="root">
+          <div id="comp_4a71516943d5230682387256ca7ecb0e">
+            <form action="" method="get" id="SEARCH_FORM" class="site-search">
+              <input
+                type="hidden"
+                name="bxajaxid"
+                id="bxajaxid_4a71516943d5230682387256ca7ecb0e_8BACKi"
+                value="4a71516943d5230682387256ca7ecb0e"
+              /><input type="hidden" name="AJAX_CALL" value="Y" />
+              <div class="easy-autocomplete" id="app_search_title">
+                <input
+                  v-model="search"
+                  id="STR"
+                  type="text"
+                  placeholder="Поиск"
+                  autocomplete="off"
+                  name="q"
+                  value=""
+                />
+                <div
+                  class="easy-autocomplete-container"
+                  id="eac-container-site-search"
+                >
+                  <ul style="display: block" v-show="result.length > 0">
+                    <li
+                      v-for="item in result"
+                      class="js_text-select"
+                      v-on:click="startSearch(item)"
+                    >
+                      <div class="eac-item">
+                        <div class="tags" v-html="item.IBLOCK.NAME"></div>
+                        <div class="text" v-html="item.TITLE_FORMATED"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="site-search__separator"></div>
+              <input type="hidden" id="IBLOCK" name="iblock" value="" />
+              <button
+                id="start-search"
+                class="btn btn-sm btn-icon-right site-search__button"
+              >
+                Найти <i class="icon-arrow-right"></i>
+              </button>
+            </form>
+            <div class="search-examples" data-search="examples">
+              <strong>Пример:</strong>
+              <strong>Пример:</strong>
+              <span>Математическая модель закона Бернули</span> или
+              <span>Журнал "Молодой учёный"</span>
+            </div>
+            <div class="search-modal__close">
+              <button class="btn-sm" data-role="close-modal">закрыть</button>
+            </div>
+          </div>
+          <div class="site-map" data-collapse="root">
+            <div
+              class="site-map__header"
+              data-collapse="toggle"
+              data-collapse-class="site-map--opened"
+            >
+              Карта сайта
+            </div>
+            <div
+              class="site-map__content"
+              data-collapse="content"
+              style="display: none; opacity: 0"
+            >
+              <div>
+                <a href="../local/exe/mars-setup.exe">Скачать дистрибутив</a>
+              </div>
+              /* <div>
+                <a href="../models/">Примеры моделей</a>
+              </div> */
+              <div>
+                <a href="../publications.html">Публикации и материалы</a>
+              </div>
+              <div>
+                <a href="../news.html">Новости</a>
+              </div>
+              <div>
+                <a href="../contacts.html">Контакты</a>
+              </div>
+              /* <div>
+                <a href="../tch/">Запрос ТКП</a>
+              </div> */
+              <div>
+                <a href="../forum.html">Форум</a>
+              </div>
+              <div>
+                <a href="../instructions.html">Справка</a>
+              </div>
+              /* <div>
+                <a href="../faq/">FAQ</a>
+              </div> */
+              /* <div>
+                <a href="../library/">Библиотеки</a>
+              </div> */
+              <div>
+                <a href="../projects.html">Проекты</a>
+              </div>
+              /* <div>
+                <a href="../sitemap/">Карта сайта</a>
+              </div> */
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal requirements-modal" data-modal-type="requirements">
+      <div class="container">
+        <header class="requirements-modal__header">
+          <div class="МАРС-logo-modal"></div>
+          <div class="close-button-white" data-role="close-modal"></div>
+        </header>
+        <div class="requirements-modal__body">
+          <div class="requirements-modal__title">Системные требования</div>
+          <div class="requirements-modal__text">
+            <div>
+              <p><strong>Минимальные системные требования:</strong></p>
+              <p>
+                Процессор: c двумя и более физическими ядрами, поддерживающий
+                технологию SSE2
+              </p>
+              <p>Видеокарта: GeForce 8600/ATI Radeon HD 4550M</p>
+              <p>Оперативная память: 2 ГБ для Windows 7/8/10</p>
+              <p>Операционная система: Windows 7/8/10</p>
+              <p>Место на диске: 40 ГБ</p>
+            </div>
+            <div>
+              <p><strong>Рекомендуемые системные требования:</strong></p>
+              <p>Процессор: Intel Core i5-7400 / AMD Ryzen 5 1500X</p>
+              <p>
+                Видеокарта: NVIDIA® GeForce GTX 1050 Ti 4 ГБ / NVIDIA® GeForce
+                GTX 1650 4 ГБ / Radeon RX 570 (4 ГБ)
+              </p>
+              <p>Оперативная память: 8 Гб</p>
+              <p>Операционная система: Windows 7/8/10 — 64-bit</p>
+              <p>Место на диске: 61.5 ГБ</p>
+              <p>
+                Скорость интернет-соединения: 1024 Кбит/с или выше (для работы
+                голосового чата)
+              </p>
+            </div>
+          </div>
+          <div class="center mt100">
+            <a data-role="close-modal" class="btn-sm">закрыть</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal download-modal" data-modal-type="download">
+      <div class="container">
+        <header class="download-modal__header">
+          <div class="МАРС-logo-modal-2"></div>
+          <div class="close-button-white" data-role="close-modal"></div>
+        </header>
+        <div id="comp_58ce54de7215a828d8230882ebd71566">
+          <form
+            class="download-modal__body"
+            action=""
+            id="FFD"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <input
+              type="hidden"
+              name="bxajaxid"
+              id="bxajaxid_58ce54de7215a828d8230882ebd71566_Ar8Szp"
+              value="58ce54de7215a828d8230882ebd71566"
+            /><input type="hidden" name="AJAX_CALL" value="Y" />
+            <div class="download-modal__title">Скачать программу</div>
+
+            <div class="download-modal__form-top">
+              <select name="FFD[PROP][LICENSE]" id="">
+                <option value="210">
+                  МАРС - 64 битная версия для ОС Windows 7 и выше
+                </option>
+                <option value="212">
+                  МАРС - 32 битная версия для ОС Windows 7 и выше
+                </option>
+                <option value="254">
+                  МАРС - 32 битная версия для ОС Windows XP
+                </option>
+                <option value="2998">
+                  МАРС - 64 битная Английская версия для ОС Windows 7 и
+                  выше
+                </option>
+                <option value="211">
+                  МАРС - 32 битная Английская версия для ОС Windows 7 и
+                  выше
+                </option>
+                <option value="2561">
+                  МАРС - Бета-версия для OC Linux
+                </option>
+                <option value="251">Пакет компиляторов</option>
+                <option value="19995">NordWind - ОС Linux</option>
+              </select>
+            </div>
+            <div class="download-modal__form js_company">
+              <input
+                type="text"
+                placeholder="фамилия*"
+                required
+                name="FFD[PROP][SECOND_NAME]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="имя"
+                name="FFD[PROP][NAME]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="отчество"
+                name="FFD[PROP][LAST_NAME]"
+                value=""
+              />
+
+              <div class="switch-wrap">
+                <span
+                  onclick="$(this).parents('.download-modal__form').addClass('js_company');"
+                  class="switch-label switch-label--active"
+                  >Компания</span
+                >
+                <span
+                  onclick="$(this).parents('.download-modal__form').toggleClass('js_company');"
+                  class="switch"
+                  data-switch-name="ttt"
+                  data-value-left="left"
+                  data-value-right="right"
+                  ><input type="hidden" name="FFD[PROP][TYPE]" value="Компания"
+                /></span>
+                <span
+                  onclick="$(this).parents('.download-modal__form').removeClass('js_company');"
+                  class="switch-label"
+                  >Учебное заведение</span
+                >
+              </div>
+
+              <div class="switch-wrap switch-wrap--university">
+                <span class="switch-label switch-label--active"
+                  >Преподаватель</span
+                >
+                <span
+                  class="switch"
+                  data-switch-name="ttt"
+                  data-value-left="left"
+                  data-value-right="right"
+                  ><input
+                    type="hidden"
+                    name="FFD[PROP][UNIVERSITY_TYPE]"
+                    value="Преподаватель"
+                /></span>
+                <span class="switch-label">Студент/Аспирант</span>
+              </div>
+
+              <div
+                id="download_app_university_input"
+                tabindex="0"
+                @focusout="handleFocusOut"
+              >
+                <input
+                  type="text"
+                  placeholder="название организации*"
+                  v-model="input"
+                  name="FFD[PROP][ORGANIZATION]"
+                  required
+                  value=""
+                />
+                <ul class="freeware-form__results" v-if="input && show">
+                  <li
+                    class="freeware-form__result"
+                    v-for="(element, index) in result"
+                    v-html="element.format"
+                    @click="input = element.original; show = false"
+                  ></li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                placeholder="должность"
+                name="FFD[PROP][POSITION]"
+                value=""
+              />
+              <input
+                type="text"
+                placeholder="эл. почта*"
+                name="FFD[PROP][EMAIL]"
+                required
+                value=""
+              />
+              <input
+                type="tel"
+                placeholder="телефон"
+                name="FFD[PROP][PHONE]"
+                value=""
+              />
+
+              <textarea
+                class="support-form__textarea"
+                rows="5"
+                placeholder="комментарий"
+                name="FFD[COMMENT]"
+              ></textarea>
+              <input
+                type="hidden"
+                name="recaptcha_response"
+                id="FFDrecaptchaResponse"
+              />
+              <div class="bottom-bid__buttons-agreement">
+                <input
+                  type="checkbox"
+                  required=""
+                  id="FFD_check"
+                  onclick="$('#FFD_but').prop('disabled', function(i, v) { if(this.checked) {return false} else {return true}; }.bind(this) );"
+                />
+                <label for="FFD_check" class="custom-checkbox">
+                  Настоящим даю свое согласие на обработку персональных данных в
+                  соответствии с&nbsp;
+                  <a href="../upload/policy2.pdf" target="_blank"
+                    >политикой обработки персональных данных</a
+                  >&nbsp; и&nbsp;
+                  <a href="../policy.pdf" target="_blank"
+                    >политикой конфиденциальности</a
+                  >&nbsp; ООО "3ВС"
+                </label>
+              </div>
+            </div>
+
+            <div class="center mt10">
+              <button
+                id="FFD_but"
+                name="FFD[SUBMIT]"
+                class="btn-sm btn-orange"
+                value="button"
+              >
+                продолжить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal image-viewer" data-modal-type="image-viewer">
+      <a class="image-viewer__close" data-role="close-modal"></a>
+      <div class="image-viewer__card"></div>
+      <div class="image-viewer__dots">
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot"></span>
+        <span class="image-viewer__dot image-viewer__dot--active"></span>
+      </div>
+    </div>
+
+    <script>
+        let clicked = false
+
+        $("#menu-ham").click(() => {
+            // main-mobile-menu--active
+            if (!clicked) {
+                $(".main-mobile-menu").addClass("main-mobile-menu--active");
+                $(".main-mobile-menu").css('opacity', '1');
+                clicked = true
+            }
+            else {
+                clicked = false
+                $(".main-mobile-menu").removeClass("main-mobile-menu--active");
+                $(".main-mobile-menu").css('opacity', '0');
+            }
+        })
+
+    </script>
+
+
+<script>
+    let clicked_download = false
+
+    $("#d123").click(() => {
+        // main-mobile-menu--active
+        if (!clicked_download) {
+            $(".download-modal").addClass("modal--opened");
+            $(".download-modal").css('opacity', '1');
+            clicked_download = true
+        }
+        else {
+            clicked_download = false
+            $(".download-modal").removeClass("modal--opened");
+            $(".download-modal").css('opacity', '0');
+        }
+    })
+
+</script>
+
+
+
+<script>
+
+    function download() {
+        window.location.href = "https://disk.yandex.ru/client/disk/%D0%9E%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%9C%D0%90%D0%A0%D0%A1/SE_MARS";
+    }
+
+
+</script>
+
+  </body>
+</html>

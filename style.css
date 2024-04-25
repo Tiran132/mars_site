@@ -908,3 +908,8 @@ form .error-message {
 .margin-elemets1 hr {
   margin: 20px 0;
 }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
